@@ -1,16 +1,20 @@
-﻿import click
-from rich.progress import Progress
-from pathlib import Path
+﻿from pathlib import Path
 from typing import List
-from .persona import build_persona
+
+import click
+from rich.progress import Progress
+
 from .content import OpenAITextGenerator
-from .exporter import export_json, render_html, export_pdf, export_csv
+from .exporter import export_csv, export_json, export_pdf, render_html
+from .persona import build_persona
 
 VALID_FORMATS = ["pdf", "json", "html", "csv"]
 
 
 def sanitize_filename(name: str) -> str:
-    return "".join(c if c.isalnum() or c in (" ", "_", "-") else "_" for c in name).replace(" ", "_")
+    return "".join(
+        c if c.isalnum() or c in (" ", "_", "-") else "_" for c in name
+    ).replace(" ", "_")
 
 
 @click.group()
@@ -20,8 +24,12 @@ def cli():
 
 
 @cli.command()
-@click.option("--count", default=1, show_default=True, type=int, help="Number of CVs to generate")
-@click.option("--language", default=None, help="Preferred language: de/fr/it (optional)")
+@click.option(
+    "--count", default=1, show_default=True, type=int, help="Number of CVs to generate"
+)
+@click.option(
+    "--language", default=None, help="Preferred language: de/fr/it (optional)"
+)
 @click.option(
     "--format",
     "formats",
@@ -31,8 +39,14 @@ def cli():
     help="Output formats (can pass multiple times)",
 )
 @click.option("--output-dir", default="out", show_default=True, help="Output directory")
-@click.option("--use-llm/--no-llm", default=False, help="Enable OpenAI LLM for richer summaries (optional)")
-def generate(count: int, language: str, formats: List[str], output_dir: str, use_llm: bool):
+@click.option(
+    "--use-llm/--no-llm",
+    default=False,
+    help="Enable OpenAI LLM for richer summaries (optional)",
+)
+def generate(
+    count: int, language: str, formats: List[str], output_dir: str, use_llm: bool
+):
     """
     Generate one or multiple CVs.
 
@@ -75,7 +89,9 @@ def generate(count: int, language: str, formats: List[str], output_dir: str, use
         csv_path = out / "personas_summary.csv"
         export_csv(generated_personas, csv_path)
 
-    click.echo(f"Done. Generated {len(generated_personas)} personas. Output directory: {out.resolve()}")
+    click.echo(
+        f"Done. Generated {len(generated_personas)} personas. Output directory: {out.resolve()}"
+    )
 
 
 if __name__ == "__main__":

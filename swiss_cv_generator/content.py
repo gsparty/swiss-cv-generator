@@ -1,6 +1,7 @@
-import os
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 import json
+import os
+
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 try:
     import openai
@@ -9,12 +10,16 @@ except Exception:
 
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "..", "templates")
 
-env = Environment(loader=FileSystemLoader(TEMPLATE_DIR), autoescape=select_autoescape(["html", "xml"]))
+env = Environment(
+    loader=FileSystemLoader(TEMPLATE_DIR), autoescape=select_autoescape(["html", "xml"])
+)
 
 
 class OpenAITextGenerator:
     def __init__(self, enabled: bool = True):
-        self.enabled = enabled and (openai is not None) and bool(os.getenv("OPENAI_API_KEY"))
+        self.enabled = (
+            enabled and (openai is not None) and bool(os.getenv("OPENAI_API_KEY"))
+        )
         if self.enabled:
             openai.api_key = os.getenv("OPENAI_API_KEY")
 

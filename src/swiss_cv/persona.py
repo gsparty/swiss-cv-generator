@@ -1,6 +1,7 @@
-﻿from dataclasses import dataclass, asdict, field
+﻿import random
+from dataclasses import asdict, dataclass, field
 from typing import Optional
-import random
+
 
 @dataclass
 class SwissPersona:

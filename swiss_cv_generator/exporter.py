@@ -1,11 +1,13 @@
+import csv
 import json
 from pathlib import Path
 from typing import List
+
 from .content import env
-import csv
 
 try:
     from weasyprint import HTML
+
     HAVE_WEASY = True
 except Exception:
     HAVE_WEASY = False

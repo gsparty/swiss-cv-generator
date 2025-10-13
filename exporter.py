@@ -1,6 +1,6 @@
 # swiss_cv_generator/exporter.py
-import json
 import csv
+import json
 import shutil
 import subprocess
 import sys
@@ -12,6 +12,7 @@ from .content import env
 # Try importing WeasyPrint (optional)
 try:
     from weasyprint import HTML  # type: ignore
+
     HAVE_WEASY = True
 except Exception:
     HAVE_WEASY = False
@@ -40,7 +41,14 @@ def _chrome_paths() -> List[str]:
     """
     candidates = []
     # try PATH names
-    for name in ("chrome", "chrome.exe", "chromium", "chromium.exe", "msedge", "msedge.exe"):
+    for name in (
+        "chrome",
+        "chrome.exe",
+        "chromium",
+        "chromium.exe",
+        "msedge",
+        "msedge.exe",
+    ):
         p = shutil.which(name)
         if p:
             candidates.append(p)
@@ -83,7 +91,9 @@ def _try_chrome_print(infile: Path, outfile: Path) -> bool:
         ]
         try:
             # run and wait (suppress stdout/stderr unless it fails)
-            proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=20)
+            proc = subprocess.run(
+                cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=20
+            )
             if proc.returncode == 0 and outfile.exists():
                 return True
             # continue to next candidate if this one failed
@@ -106,7 +116,10 @@ def export_pdf(html: str, out_path: Path):
             HTML(string=html).write_pdf(str(out_path))
             return
         except Exception as e:
-            print("WeasyPrint failed to render PDF, falling back to Chrome if available. Error:", e)
+            print(
+                "WeasyPrint failed to render PDF, falling back to Chrome if available. Error:",
+                e,
+            )
 
     # write temporary HTML file for Chrome to read
     tmp_html = out_path.with_suffix(".html")
@@ -123,8 +136,12 @@ def export_pdf(html: str, out_path: Path):
         return
 
     # final fallback: leave HTML, report to user
-    print("PDF conversion not available (WeasyPrint not installed and no Chrome/Edge found).")
-    print(f"Wrote HTML to {tmp_html} instead of PDF. To create PDFs automatically, install WeasyPrint or ensure Chrome/Edge is on PATH.")
+    print(
+        "PDF conversion not available (WeasyPrint not installed and no Chrome/Edge found)."
+    )
+    print(
+        f"Wrote HTML to {tmp_html} instead of PDF. To create PDFs automatically, install WeasyPrint or ensure Chrome/Edge is on PATH."
+    )
 
 
 def export_csv(personas: List, out_path: Path):

@@ -1,6 +1,9 @@
 ﻿import random
-from .swiss_persona import SwissPersona
+
 from data_loaders.swiss_data_loader import SwissDataLoader
+
+from .swiss_persona import SwissPersona
+
 
 class SwissPersonaGenerator:
     def __init__(self, canton_filter=None, language_filter=None, industry_filter=None):
@@ -17,24 +20,24 @@ class SwissPersonaGenerator:
         # 3. Demographics
         age = random.randint(18, 65)
         years_exp = max(0, age - 22)
-        gender = random.choice(['Male', 'Female', 'Other'])
+        gender = random.choice(["Male", "Female", "Other"])
         # 4. Names by primary language
-        pl = canton.get('primary_language', 'de')
-        if pl == 'de':
-            first = random.choice(['Hans', 'Julia'])
-            last  = random.choice(['Müller', 'Meier'])
-        elif pl == 'fr':
-            first = random.choice(['Jean', 'Marie'])
-            last  = random.choice(['Dubois', 'Moreau'])
+        pl = canton.get("primary_language", "de")
+        if pl == "de":
+            first = random.choice(["Hans", "Julia"])
+            last = random.choice(["Müller", "Meier"])
+        elif pl == "fr":
+            first = random.choice(["Jean", "Marie"])
+            last = random.choice(["Dubois", "Moreau"])
         else:
-            first = random.choice(['Luca', 'Sofia'])
-            last  = random.choice(['Rossi', 'Bianchi'])
+            first = random.choice(["Luca", "Sofia"])
+            last = random.choice(["Rossi", "Bianchi"])
         # 5. Contact info
-        email    = f"{first.lower()}.{last.lower()}@example.ch"
-        phone    = f"+41{random.randint(700000000,799999999)}"
+        email = f"{first.lower()}.{last.lower()}@example.ch"
+        phone = f"+41{random.randint(700000000,799999999)}"
         linkedin = f"https://www.linkedin.com/in/{first.lower()}{last.lower()}"
         # 6. Employer
-        company  = self.loader.sample_company(canton['code'])
+        company = self.loader.sample_company(canton["code"])
         # 7. Languages
         languages = {pl: 1.0}
 
@@ -45,7 +48,7 @@ class SwissPersonaGenerator:
             gender=gender,
             nationality="Swiss",
             canton=canton,
-            city=random.choice(canton.get('major_cities', [''])),
+            city=random.choice(canton.get("major_cities", [""])),
             occupation=occupation,
             years_experience=years_exp,
             email=email,
@@ -53,5 +56,5 @@ class SwissPersonaGenerator:
             linkedin_url=linkedin,
             primary_language=pl,
             languages=languages,
-            current_employer=company.get('name', '')
+            current_employer=company.get("name", ""),
         )

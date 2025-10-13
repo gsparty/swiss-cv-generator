@@ -1,9 +1,11 @@
-from openai import OpenAI
 import os
+
+from openai import OpenAI
+
 
 class SummaryGenerator:
     def __init__(self, api_key: str = None):
-        self.client = OpenAI(api_key=api_key or os.getenv('OPENAI_API_KEY'))
+        self.client = OpenAI(api_key=api_key or os.getenv("OPENAI_API_KEY"))
 
     def generate(self, persona, max_tokens: int = 150) -> str:
         prompt = (
@@ -14,6 +16,6 @@ class SummaryGenerator:
         response = self.client.chat.completions.create(
             model="gpt-4",
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=max_tokens
+            max_tokens=max_tokens,
         )
         return response.choices[0].message.content.strip()

@@ -1,52 +1,62 @@
-﻿import random
-import os
+﻿import os
+import random
+
 from .persona import SwissPersona
 
 # name pools (small; expand later for realism)
 NAME_POOLS = {
     "de": {
-        "male": ["Andreas","Lukas","Thomas","Markus"],
-        "female": ["Sandra","Anna","Monika","Laura"],
-        "last": ["Müller","Meier","Schmid","Keller"]
+        "male": ["Andreas", "Lukas", "Thomas", "Markus"],
+        "female": ["Sandra", "Anna", "Monika", "Laura"],
+        "last": ["Müller", "Meier", "Schmid", "Keller"],
     },
     "fr": {
-        "male": ["Pierre","Jean","Marc","Luc"],
-        "female": ["Marie","Camille","Sophie","Claire"],
-        "last": ["Martin","Dubois","Morel","Leroy"]
+        "male": ["Pierre", "Jean", "Marc", "Luc"],
+        "female": ["Marie", "Camille", "Sophie", "Claire"],
+        "last": ["Martin", "Dubois", "Morel", "Leroy"],
     },
     "it": {
-        "male": ["Marco","Luca","Giovanni","Stefano"],
-        "female": ["Maria","Elena","Lucia","Francesca"],
-        "last": ["Rossi","Bianchi","Ferrari","Galli"]
-    }
+        "male": ["Marco", "Luca", "Giovanni", "Stefano"],
+        "female": ["Maria", "Elena", "Lucia", "Francesca"],
+        "last": ["Rossi", "Bianchi", "Ferrari", "Galli"],
+    },
 }
 
-PHONE_PREFIXES = {
-    "default": ["076","077","078","079"]
-}
+PHONE_PREFIXES = {"default": ["076", "077", "078", "079"]}
 
-EMAIL_DOMAINS = ["gmx.ch","bluewin.ch","sunrise.ch","gmail.com"]
+EMAIL_DOMAINS = ["gmx.ch", "bluewin.ch", "sunrise.ch", "gmail.com"]
 
-def years_experience_from_age(age:int):
+
+def years_experience_from_age(age: int):
     return max(0, age - 22)
+
 
 def choose_name(language, gender):
     pool = NAME_POOLS.get(language, NAME_POOLS["de"])
-    first = random.choice(pool["male"] if gender=="male" else pool["female"])
+    first = random.choice(pool["male"] if gender == "male" else pool["female"])
     last = random.choice(pool["last"])
     return first, last
 
+
 def generate_phone():
     pref = random.choice(PHONE_PREFIXES["default"])
-    rest = "".join(str(random.randint(0,9)) for _ in range(7))
+    rest = "".join(str(random.randint(0, 9)) for _ in range(7))
     return f"+41 {pref} {rest}"
+
 
 def generate_email(first, last):
     dom = random.choice(EMAIL_DOMAINS)
     local = f"{first.lower()}.{last.lower()}"
     # replace German special chars
-    local = local.replace("ä","ae").replace("ö","oe").replace("ü","ue").replace("ß","ss").replace("ü","ue")
+    local = (
+        local.replace("ä", "ae")
+        .replace("ö", "oe")
+        .replace("ü", "ue")
+        .replace("ß", "ss")
+        .replace("ü", "ue")
+    )
     return f"{local}@{dom}"
+
 
 def sensible_title_for_experience(occupation_title, years_exp):
     # Keep the occupation title; optionally append level if experience high
@@ -56,10 +66,13 @@ def sensible_title_for_experience(occupation_title, years_exp):
         return f"{occupation_title}"
     return f"{occupation_title}"
 
-def generate_persona(canton, occupation, company=None, language=None, gender=None, age=None):
+
+def generate_persona(
+    canton, occupation, company=None, language=None, gender=None, age=None
+):
     # canton: dict with id,name,language
-    lang = language or canton.get("language","de")
-    gender = gender or ( "male" if random.random() < 0.5 else "female")
+    lang = language or canton.get("language", "de")
+    gender = gender or ("male" if random.random() < 0.5 else "female")
     if age is None:
         # age distribution (22-65); biased to working-age cluster
         age = int(random.gauss(35, 8))
@@ -84,5 +97,5 @@ def generate_persona(canton, occupation, company=None, language=None, gender=Non
         employer=(company["name"] if company else None),
         email=email,
         phone=phone,
-        summary=summary
+        summary=summary,
     )

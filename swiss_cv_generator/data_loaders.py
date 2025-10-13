@@ -1,6 +1,6 @@
 ﻿import json
 from pathlib import Path
-from typing import Dict, Any
+from typing import Any, Dict
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
@@ -26,7 +26,9 @@ def load_cantons(path: Path | None = None) -> Dict[str, Any]:
             return json.load(fh)
     except Exception as e:
         # If parsing fails, warn and return fallback
-        print(f"Warning: failed to load cantons JSON ({p}). Using fallback dataset. Error: {e}")
+        print(
+            f"Warning: failed to load cantons JSON ({p}). Using fallback dataset. Error: {e}"
+        )
         return {
             "ZH": {"name": "Zürich", "language": "de", "weight": 1.0},
             "BE": {"name": "Bern", "language": "de", "weight": 0.6},

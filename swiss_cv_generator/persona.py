@@ -2,8 +2,8 @@ import random
 from datetime import datetime
 from typing import Optional
 
-from .models import SwissPersona, ExperienceItem, EducationItem
 from .data_loaders import load_cantons
+from .models import EducationItem, ExperienceItem, SwissPersona
 
 COMMON_NAMES = {
     "de": {
@@ -33,7 +33,9 @@ def sample_canton(cantons=None) -> str:
     return random.choices(keys, weights=weights, k=1)[0]
 
 
-def build_persona(age: Optional[int] = None, language: Optional[str] = None) -> SwissPersona:
+def build_persona(
+    age: Optional[int] = None, language: Optional[str] = None
+) -> SwissPersona:
     cantons = load_cantons()
     canton_key = sample_canton(cantons)
     canton = cantons[canton_key]
@@ -60,9 +62,18 @@ def build_persona(age: Optional[int] = None, language: Optional[str] = None) -> 
 
     current_year = datetime.now().year
     exp = [
-        ExperienceItem(role=title, company="Beispiel AG", from_year=current_year - 2, to_year=current_year)
+        ExperienceItem(
+            role=title,
+            company="Beispiel AG",
+            from_year=current_year - 2,
+            to_year=current_year,
+        )
     ]
-    edu = [EducationItem(degree="Bachelor Informatik", institution="ZHAW", year=current_year - 6)]
+    edu = [
+        EducationItem(
+            degree="Bachelor Informatik", institution="ZHAW", year=current_year - 6
+        )
+    ]
 
     persona = SwissPersona(
         name=name,
