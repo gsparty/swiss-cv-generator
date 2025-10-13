@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-﻿# Project dependencies
-openai
-jinja2
-weasyprint
-click
-rich
-=======
-﻿click
-rich
-fpdf
-jinja2
->>>>>>> 6671c1d (Initial scaffold: data, persona, generator, exporters, CLI)
+click>=8.0
+rich>=13.0
+pydantic>=1.10
+jinja2>=3.0
+weasyprint>=55.0   # optional: if WeasyPrint is hard to install, use HTML output fallback
+openai>=0.27
+pytest
