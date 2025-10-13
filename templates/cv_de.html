@@ -1,7 +1,7 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
 body { font-family: Arial, sans-serif; max-width: 800px; margin: 24px; }
@@ -12,43 +12,13 @@ ul { margin: 0; padding-left: 18px }
 </style>
 </head>
 <body>
-<h1>{{ persona.name }} — {{ persona.title }}</h1>
-<div class="meta">{{ persona.city }} • {{ persona.email }} • {{ persona.phone }}</div>
-
+<h1>{{ persona.first_name }} {{ persona.last_name }} — {{ persona.title }}</h1>
+<div class="meta">{{ persona.city }} · {{ persona.email }} · {{ persona.phone }}</div>
 
 <div class="section">
 <h2>Kurzzusammenfassung</h2>
-<p>{{ summary }}</p>
+<p>{{ persona.first_name }} {{ persona.last_name }} mit {{ persona.years_experience }} Jahren Erfahrung als {{ persona.title }}.</p>
 </div>
 
-
-<div class="section">
-<h2>Berufserfahrung</h2>
-<ul>
-{% for item in persona.experience %}
-<li><strong>{{ item.role }}</strong>, {{ item.company }} ({{ item.from }} — {{ item.to }})</li>
-{% endfor %}
-</ul>
-</div>
-
-
-<div class="section">
-<h2>Bildung</h2>
-<ul>
-{% for edu in persona.education %}
-<li>{{ edu.degree }}, {{ edu.institution }} ({{ edu.year }})</li>
-{% endfor %}
-</ul>
-</div>
-
-
-<div class="section">
-<h2>Fähigkeiten</h2>
-<ul>
-{% for s in persona.skills %}
-<li>{{ s }}</li>
-{% endfor %}
-</ul>
-</div>
 </body>
 </html>
