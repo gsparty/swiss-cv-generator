@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 ﻿# Project dependencies
 openai
 jinja2
 weasyprint
 click
 rich
+=======
+﻿click
+rich
+fpdf
+jinja2
+>>>>>>> 6671c1d (Initial scaffold: data, persona, generator, exporters, CLI)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -214,3 +215,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+=======
+﻿venv/
+__pycache__/
+*.pyc
+.env
+outputs/
+.vscode/
+.Python
+>>>>>>> 6671c1d (Initial scaffold: data, persona, generator, exporters, CLI)

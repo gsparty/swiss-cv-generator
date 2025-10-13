@@ -1,0 +1,5 @@
+﻿[
+  {"id":"ZH","name":"Zürich","language":"de","workforce":1200},
+  {"id":"GE","name":"Genève","language":"fr","workforce":600},
+  {"id":"TI","name":"Ticino","language":"it","workforce":300}
+]
