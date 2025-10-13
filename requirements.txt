@@ -1,0 +1,6 @@
+﻿# Project dependencies
+openai
+jinja2
+weasyprint
+click
+rich
