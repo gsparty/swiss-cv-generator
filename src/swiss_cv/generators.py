@@ -1,12 +1,12 @@
 ﻿import random
-from dataclasses import dataclass, asdict, is_dataclass
+from dataclasses import dataclass, asdict, is_dataclass, fields as dataclass_fields
 from typing import Any, Dict, Optional, List
+import inspect
 
 # try to import shared data loader helpers
 try:
     from .data_loaders import load_cantons, load_occupations, load_companies, sample_weighted
 except Exception:
-    # fallback if import path differs
     from src.swiss_cv.data_loaders import load_cantons, load_occupations, load_companies, sample_weighted
 
 # try to reuse existing SwissPersona dataclass if present
@@ -29,12 +29,8 @@ except Exception:
         industry: str
 
 def _get_field(obj: Any, keys: List[str], default=None):
-    """
-    Safe getter for dict-like or object-like items. Try each key in keys.
-    """
     if obj is None:
         return default
-    # dict-like
     try:
         for k in keys:
             if isinstance(obj, dict) and k in obj:
@@ -43,13 +39,9 @@ def _get_field(obj: Any, keys: List[str], default=None):
                 return getattr(obj, k)
     except Exception:
         pass
-    # if obj itself is a string, return it for 'name'-like keys
     if isinstance(obj, str) and "name" in keys:
         return obj
     return default
-
-def _normalize_name(s: str) -> str:
-    return s.replace("ü", "ue").replace("ö", "oe").replace("ä", "ae")
 
 def _generate_phone(rnd: random.Random) -> str:
     prefix = rnd.choice(["076","077","078","079"])
@@ -65,11 +57,7 @@ def _make_email(first: str, last: str, rnd: random.Random) -> str:
     return f"{local}@{rnd.choice(domains)}"
 
 def sensible_title_for_experience(base_title: str, years: int, rnd: random.Random) -> str:
-    # Conservative mapping; prefer base_title when it exists
-    if base_title:
-        base = base_title
-    else:
-        base = "Professional"
+    base = base_title or "Professional"
     if years >= 12:
         return rnd.choice([f"Senior {base}", f"Lead {base}", f"Principal {base}"])
     if years >= 6:
@@ -78,36 +66,83 @@ def sensible_title_for_experience(base_title: str, years: int, rnd: random.Rando
         return rnd.choice([base, f"Junior {base}"])
     return f"Junior {base}"
 
-def generate_persona(seed: Optional[int] = None, canton: Optional[Any] = None, occupation: Optional[Any] = None, company: Optional[Any] = None) -> SwissPersona:
+def _instantiate_persona_class(clazz, persona_dict: Dict[str, Any]):
     """
-    Robust persona generator:
-      * canton / occupation / company may be None, a dict, or a string (name/code)
-      * missing fields are handled gracefully
+    Instantiate the project's persona class by selecting only supported constructor/field names.
+    Works with dataclasses, pydantic-like models (try signature), or plain classes.
+    Falls back to attempting to set attributes after construction if needed.
     """
+    # 1) If dataclass: use dataclass field names
+    try:
+        if is_dataclass(clazz):
+            field_names = [f.name for f in dataclass_fields(clazz)]
+            kwargs = {k: persona_dict[k] for k in field_names if k in persona_dict}
+            return clazz(**kwargs)
+    except Exception:
+        pass
+
+    # 2) Try to use __init__ signature
+    try:
+        sig = inspect.signature(clazz)
+        params = [
+            name for name, p in sig.parameters.items()
+            if name != "self" and p.kind in (inspect.Parameter.POSITIONAL_OR_KEYWORD, inspect.Parameter.KEYWORD_ONLY)
+        ]
+        kwargs = {}
+        for p in params:
+            if p in persona_dict:
+                kwargs[p] = persona_dict[p]
+            else:
+                # try common synonyms
+                if p == "language" and "primary_language" in persona_dict:
+                    kwargs[p] = persona_dict["primary_language"]
+                elif p == "primary_language" and "language" in persona_dict:
+                    kwargs[p] = persona_dict["language"]
+                elif p == "years" and "years_experience" in persona_dict:
+                    kwargs[p] = persona_dict["years_experience"]
+                elif p == "first" and "first_name" in persona_dict:
+                    kwargs[p] = persona_dict["first_name"]
+                elif p == "last" and "last_name" in persona_dict:
+                    kwargs[p] = persona_dict["last_name"]
+        return clazz(**kwargs)
+    except Exception:
+        pass
+
+    # 3) Try to instantiate with no args and set attributes
+    try:
+        inst = clazz()
+        for k, v in persona_dict.items():
+            try:
+                setattr(inst, k, v)
+            except Exception:
+                pass
+        return inst
+    except Exception:
+        pass
+
+    # 4) Final fallback: return the persona_dict itself
+    return persona_dict
+
+def generate_persona(seed: Optional[int] = None, canton: Optional[Any] = None, occupation: Optional[Any] = None, company: Optional[Any] = None):
     rnd = random.Random(seed)
 
-    # Load data pools
     cantons = load_cantons()
     occupations = load_occupations()
     companies = load_companies()
 
-    # Resolve canton object
-    canton_obj = None
+    # Resolve canton
     if canton is None:
         canton_obj = sample_weighted(cantons, weight_key="workforce", rnd=rnd)
     elif isinstance(canton, str):
-        # try to find by code or name
         canton_obj = next((c for c in cantons if str(_get_field(c, ["code","id","name"], "")).lower() == canton.lower() or str(_get_field(c, ["name","major_city"], "")).lower() == canton.lower()), None)
         if canton_obj is None:
-            # fuzzy contains
             canton_obj = next((c for c in cantons if canton.lower() in str(_get_field(c, ["name","major_city"], "")).lower()), None)
         if canton_obj is None:
             canton_obj = sample_weighted(cantons, weight_key="workforce", rnd=rnd)
     else:
         canton_obj = canton
 
-    # Resolve occupation object
-    occ_obj = None
+    # Resolve occupation
     if occupation is None:
         occ_obj = rnd.choice(occupations) if occupations else {"title":"Professional","industry":"General"}
     elif isinstance(occupation, str):
@@ -119,8 +154,7 @@ def generate_persona(seed: Optional[int] = None, canton: Optional[Any] = None, o
     else:
         occ_obj = occupation
 
-    # Resolve company object
-    comp_obj = None
+    # Resolve company
     if company is None:
         comp_obj = rnd.choice(companies) if companies else {"name":"Freelance","industry":_get_field(occ_obj, ["industry"], "General")}
     elif isinstance(company, str):
@@ -132,16 +166,13 @@ def generate_persona(seed: Optional[int] = None, canton: Optional[Any] = None, o
     else:
         comp_obj = company
 
-    # language and city/canton strings
     language = _get_field(canton_obj, ["language"], "de")
     canton_name = _get_field(canton_obj, ["name","code","id"], "Unknown")
     city = _get_field(canton_obj, ["major_city","city"], "")
 
-    # age & experience
     age = rnd.randint(22, 60)
     years = max(0, age - 22)
 
-    # name pools (extend these JSON-driven lists later)
     names = {
         "de": {"first":["Andreas","Sandra","Michael","Claudia","Stefan"], "last":["Müller","Meier","Keller","Schneider"]},
         "fr": {"first":["Pierre","Marie","Luc","Sophie"], "last":["Martin","Dubois","Bernard"]},
@@ -157,18 +188,28 @@ def generate_persona(seed: Optional[int] = None, canton: Optional[Any] = None, o
     title = sensible_title_for_experience(base_title, years, rnd)
     industry = _get_field(occ_obj, ["industry"], _get_field(comp_obj, ["industry"], "General"))
 
-    persona = SwissPersona(
-        first_name=first,
-        last_name=last,
-        age=age,
-        years_experience=years,
-        gender="unspecified",
-        primary_language=language,
-        canton=canton_name,
-        city=city,
-        phone=phone,
-        email=email,
-        title=title,
-        industry=industry
-    )
-    return persona
+    # Build a full persona dict
+    persona_dict = {
+        "first_name": first,
+        "last_name": last,
+        "age": age,
+        "years_experience": years,
+        "gender": "unspecified",
+        "primary_language": language,
+        "language": language,
+        "canton": canton_name,
+        "canton_id": _get_field(canton_obj, ["id","code"], None),
+        "city": city,
+        "phone": phone,
+        "email": email,
+        "title": title,
+        "industry": industry
+    }
+
+    # Instantiate project persona class in a tolerant way
+    try:
+        instance = _instantiate_persona_class(SwissPersona, persona_dict)
+        return instance
+    except Exception:
+        # final fallback: return persona_dict
+        return persona_dict
