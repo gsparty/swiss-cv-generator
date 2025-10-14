@@ -1,0 +1,14 @@
+{
+  "first_name": "Giulia",
+  "last_name": "Fontana",
+  "age": 45,
+  "years_experience": 23,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 505 5418",
+  "email": "giulia.fontana@gmx.ch",
+  "title": "Principal Senior Developer",
+  "industry": "Software"
+}

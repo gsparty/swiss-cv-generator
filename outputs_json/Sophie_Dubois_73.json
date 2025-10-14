@@ -1,0 +1,14 @@
+{
+  "first_name": "Sophie",
+  "last_name": "Dubois",
+  "age": 22,
+  "years_experience": 0,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 348 9938",
+  "email": "sophie.dubois70@sunrise.ch",
+  "title": "Junior Data Scientist",
+  "industry": "Software"
+}

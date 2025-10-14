@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 912 3018",
+  "email": "andreas.keller@gmx.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

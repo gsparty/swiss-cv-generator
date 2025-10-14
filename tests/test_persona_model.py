@@ -1,4 +1,4 @@
-﻿import pytest
+import pytest
 from src.models.persona import SwissPersona, ExperienceEntry
 
 def test_persona_basic():

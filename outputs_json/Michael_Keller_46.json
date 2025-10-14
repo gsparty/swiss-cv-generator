@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 54,
+  "years_experience": 32,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 659 1802",
+  "email": "michael.keller@gmx.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

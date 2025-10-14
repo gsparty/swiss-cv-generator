@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 28,
+  "years_experience": 6,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 762 7082",
+  "email": "andreas.schneider@gmx.ch",
+  "title": "Software Engineer",
+  "industry": "Software"
+}

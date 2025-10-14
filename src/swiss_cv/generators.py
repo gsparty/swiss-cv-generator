@@ -74,7 +74,7 @@ def _instantiate_persona_class(clazz, persona_dict: Dict[str, Any]):
     except Exception:
         pass
 
-    # fallback → wrap as dynamic object with attributes
+    # fallback ? wrap as dynamic object with attributes
     obj = types.SimpleNamespace(**persona_dict)
     return obj
 
@@ -189,3 +189,4 @@ def generate_persona_jsonable(*args, **kwargs):
     persona = gen(*args, **kwargs)
     return to_builtin(persona)
 # ---- end added helper ----
+

@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Rossi",
+  "age": 37,
+  "years_experience": 15,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 250 9051",
+  "email": "maria.rossi@sunrise.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

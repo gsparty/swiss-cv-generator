@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Meier",
+  "age": 22,
+  "years_experience": 0,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 174 9113",
+  "email": "stefan.meier@gmx.ch",
+  "title": "Junior Software Engineer",
+  "industry": "Software"
+}

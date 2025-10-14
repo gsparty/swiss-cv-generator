@@ -1,0 +1,14 @@
+{
+  "first_name": "Luca",
+  "last_name": "Bianchi",
+  "age": 40,
+  "years_experience": 18,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 511 9900",
+  "email": "luca.bianchi@gmx.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

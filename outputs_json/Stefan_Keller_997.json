@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Keller",
+  "age": 37,
+  "years_experience": 15,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 589 3997",
+  "email": "stefan.keller@gmx.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

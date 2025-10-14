@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Martin",
+  "age": 43,
+  "years_experience": 21,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 920 7443",
+  "email": "luc.martin@gmx.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

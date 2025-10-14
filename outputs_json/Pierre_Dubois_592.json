@@ -1,0 +1,14 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Dubois",
+  "age": 55,
+  "years_experience": 33,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 781 4064",
+  "email": "pierre.dubois@gmx.ch",
+  "title": "Principal Senior Developer",
+  "industry": "Software"
+}

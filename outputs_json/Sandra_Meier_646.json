@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Meier",
+  "age": 44,
+  "years_experience": 22,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 531 2154",
+  "email": "sandra.meier72@sunrise.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

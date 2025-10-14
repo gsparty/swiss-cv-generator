@@ -1,5 +1,5 @@
-﻿from swiss_cv_generator.models import SwissPersona
-from swiss_cv_generator.data_loaders.bfs_loader import fetch_bfs_table_by_id
+from swiss_cv.models import SwissPersona
+from swiss_cv.data_loaders.bfs_loader import fetch_bfs_table_by_id
 import json
 import os
 import traceback

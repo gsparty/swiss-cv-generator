@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Fontana",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 076 085 8421",
+  "email": "marco.fontana56@gmx.ch",
+  "title": "Principal Senior Developer",
+  "industry": "Software"
+}

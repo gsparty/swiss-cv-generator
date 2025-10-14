@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 56,
+  "years_experience": 34,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 895 8198",
+  "email": "michael.keller51@sunrise.ch",
+  "title": "Principal Projektleiter",
+  "industry": "Engineering"
+}

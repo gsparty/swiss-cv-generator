@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Müller",
+  "age": 36,
+  "years_experience": 14,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 705 8159",
+  "email": "stefan.mueller49@sunrise.ch",
+  "title": "Principal Projektleiter",
+  "industry": "Engineering"
+}

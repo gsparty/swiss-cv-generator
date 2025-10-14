@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Keller",
+  "age": 56,
+  "years_experience": 34,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 728 7098",
+  "email": "claudia.keller@bluewin.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

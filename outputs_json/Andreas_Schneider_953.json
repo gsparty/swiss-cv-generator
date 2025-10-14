@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 389 2211",
+  "email": "andreas.schneider@bluewin.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Meier",
+  "age": 54,
+  "years_experience": 32,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 168 7508",
+  "email": "andreas.meier@sunrise.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}

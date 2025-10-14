@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Müller",
+  "age": 45,
+  "years_experience": 23,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 683 5655",
+  "email": "michael.mueller@gmx.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Müller",
+  "age": 31,
+  "years_experience": 9,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 267 0557",
+  "email": "michael.mueller@sunrise.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

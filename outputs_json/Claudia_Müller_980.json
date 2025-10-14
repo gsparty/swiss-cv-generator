@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Müller",
+  "age": 52,
+  "years_experience": 30,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 177 9802",
+  "email": "claudia.mueller@bluewin.ch",
+  "title": "Lead Junior Analyst",
+  "industry": "Finance"
+}

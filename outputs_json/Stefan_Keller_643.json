@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Keller",
+  "age": 39,
+  "years_experience": 17,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 526 5008",
+  "email": "stefan.keller@bluewin.ch",
+  "title": "Principal Senior Developer",
+  "industry": "Software"
+}

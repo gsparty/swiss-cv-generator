@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 41,
+  "years_experience": 19,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 480 8948",
+  "email": "andreas.schneider@sunrise.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

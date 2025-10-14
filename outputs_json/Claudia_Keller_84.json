@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Keller",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 146 8399",
+  "email": "claudia.keller@sunrise.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

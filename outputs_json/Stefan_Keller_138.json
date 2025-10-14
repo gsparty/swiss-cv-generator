@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Keller",
+  "age": 47,
+  "years_experience": 25,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 715 6625",
+  "email": "stefan.keller1@sunrise.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

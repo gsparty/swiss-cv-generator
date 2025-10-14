@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Müller",
+  "age": 48,
+  "years_experience": 26,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 025 1616",
+  "email": "sandra.mueller@sunrise.ch",
+  "title": "Lead Junior Analyst",
+  "industry": "Finance"
+}

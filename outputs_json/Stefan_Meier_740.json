@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Meier",
+  "age": 30,
+  "years_experience": 8,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 292 9369",
+  "email": "stefan.meier48@sunrise.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

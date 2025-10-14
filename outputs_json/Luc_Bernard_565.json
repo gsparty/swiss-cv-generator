@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Bernard",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 318 0810",
+  "email": "luc.bernard@bluewin.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

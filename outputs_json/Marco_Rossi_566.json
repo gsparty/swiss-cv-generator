@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Rossi",
+  "age": 46,
+  "years_experience": 24,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 076 380 7692",
+  "email": "marco.rossi@sunrise.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

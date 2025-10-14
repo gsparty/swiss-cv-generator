@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 45,
+  "years_experience": 23,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 208 9579",
+  "email": "andreas.keller83@sunrise.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

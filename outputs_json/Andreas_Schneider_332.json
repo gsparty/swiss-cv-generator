@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 47,
+  "years_experience": 25,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 929 6528",
+  "email": "andreas.schneider@gmx.ch",
+  "title": "Lead Junior Analyst",
+  "industry": "Finance"
+}

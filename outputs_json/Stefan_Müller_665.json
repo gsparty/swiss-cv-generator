@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Müller",
+  "age": 30,
+  "years_experience": 8,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 168 4068",
+  "email": "stefan.mueller@bluewin.ch",
+  "title": "Senior Developer",
+  "industry": "Software"
+}

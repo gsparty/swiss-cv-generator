@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Martin",
+  "age": 41,
+  "years_experience": 19,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 532 0779",
+  "email": "luc.martin@sunrise.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

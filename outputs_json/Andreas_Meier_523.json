@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Meier",
+  "age": 44,
+  "years_experience": 22,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 645 6896",
+  "email": "andreas.meier@gmx.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

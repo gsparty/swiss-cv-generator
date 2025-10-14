@@ -83,3 +83,4 @@ if __name__ == '__main__':
     print('Normalizing', csv_in)
     out = normalize_population_csv(csv_in)
     print('Wrote', len(out), 'rows to data/processed/pop_by_canton.json')
+

@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Meier",
+  "age": 49,
+  "years_experience": 27,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 885 9076",
+  "email": "michael.meier73@sunrise.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

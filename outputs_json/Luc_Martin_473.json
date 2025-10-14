@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Martin",
+  "age": 22,
+  "years_experience": 0,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 306 2579",
+  "email": "luc.martin77@sunrise.ch",
+  "title": "Junior Data Scientist",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 45,
+  "years_experience": 23,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 009 6631",
+  "email": "michael.keller@bluewin.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

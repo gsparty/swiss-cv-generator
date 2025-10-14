@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Schneider",
+  "age": 56,
+  "years_experience": 34,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 974 7791",
+  "email": "stefan.schneider@sunrise.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

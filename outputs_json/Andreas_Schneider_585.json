@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 27,
+  "years_experience": 5,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 709 1084",
+  "email": "andreas.schneider@sunrise.ch",
+  "title": "Junior Software Engineer",
+  "industry": "Software"
+}

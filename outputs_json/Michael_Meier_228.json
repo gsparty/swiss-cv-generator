@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Meier",
+  "age": 28,
+  "years_experience": 6,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 011 8804",
+  "email": "michael.meier@gmx.ch",
+  "title": "Projektleiter",
+  "industry": "Engineering"
+}

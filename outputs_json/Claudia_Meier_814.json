@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Meier",
+  "age": 27,
+  "years_experience": 5,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 224 4274",
+  "email": "claudia.meier@bluewin.ch",
+  "title": "Junior Analyst",
+  "industry": "Finance"
+}

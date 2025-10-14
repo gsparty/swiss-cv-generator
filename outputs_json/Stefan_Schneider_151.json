@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Schneider",
+  "age": 31,
+  "years_experience": 9,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 146 8341",
+  "email": "stefan.schneider@bluewin.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

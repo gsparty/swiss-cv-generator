@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Keller",
+  "age": 35,
+  "years_experience": 13,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 863 3747",
+  "email": "sandra.keller@bluewin.ch",
+  "title": "Principal Projektleiter",
+  "industry": "Engineering"
+}

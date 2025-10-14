@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 27,
+  "years_experience": 5,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 633 7417",
+  "email": "michael.keller@gmx.ch",
+  "title": "Junior Data Scientist",
+  "industry": "Software"
+}

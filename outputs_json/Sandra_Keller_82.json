@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Keller",
+  "age": 28,
+  "years_experience": 6,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 796 1965",
+  "email": "sandra.keller20@bluewin.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

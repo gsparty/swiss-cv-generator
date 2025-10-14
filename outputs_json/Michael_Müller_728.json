@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Müller",
+  "age": 36,
+  "years_experience": 14,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 983 1409",
+  "email": "michael.mueller@gmx.ch",
+  "title": "Lead Data Scientist",
+  "industry": "Software"
+}

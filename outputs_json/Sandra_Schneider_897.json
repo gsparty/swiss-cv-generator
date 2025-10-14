@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Schneider",
+  "age": 33,
+  "years_experience": 11,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 285 4293",
+  "email": "sandra.schneider@sunrise.ch",
+  "title": "Junior Analyst",
+  "industry": "Finance"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Keller",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 893 1037",
+  "email": "stefan.keller91@sunrise.ch",
+  "title": "Senior Developer",
+  "industry": "Software"
+}

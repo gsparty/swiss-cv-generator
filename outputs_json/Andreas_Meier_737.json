@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Meier",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 548 9283",
+  "email": "andreas.meier@bluewin.ch",
+  "title": "Senior Developer",
+  "industry": "Software"
+}

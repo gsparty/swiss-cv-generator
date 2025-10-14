@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 42,
+  "years_experience": 20,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 702 8491",
+  "email": "andreas.schneider@gmx.ch",
+  "title": "Lead Data Scientist",
+  "industry": "Software"
+}

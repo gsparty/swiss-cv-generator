@@ -1,4 +1,4 @@
-﻿# generators/persona.py
+# generators/persona.py
 import random
 from dataclasses import asdict, dataclass
 

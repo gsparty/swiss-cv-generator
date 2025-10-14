@@ -21,3 +21,4 @@ class SwissPersona:
 
     def to_dict(self):
         return asdict(self)
+

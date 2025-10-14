@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Müller",
+  "age": 41,
+  "years_experience": 19,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 289 9526",
+  "email": "michael.mueller@sunrise.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

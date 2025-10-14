@@ -1,4 +1,4 @@
-﻿from swiss_cv_generator.generator import generate
+from swiss_cv.generator import generate
 # generate(count, seed, out_dir, canton, industry, validate_schema, schema_path)
 generate(
     count=50,

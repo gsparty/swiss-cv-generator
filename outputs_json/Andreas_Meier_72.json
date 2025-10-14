@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Meier",
+  "age": 44,
+  "years_experience": 22,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 306 9098",
+  "email": "andreas.meier@gmx.ch",
+  "title": "Lead Data Scientist",
+  "industry": "Software"
+}

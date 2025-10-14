@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Bernard",
+  "age": 47,
+  "years_experience": 25,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 014 5921",
+  "email": "marie.bernard@bluewin.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

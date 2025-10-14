@@ -103,3 +103,4 @@ if __name__ == '__main__':
     with open(out_path, 'w', encoding='utf8') as f:
         f.write(schema_json)
     print(f"Wrote SwissPersona JSON schema to {out_path}")
+

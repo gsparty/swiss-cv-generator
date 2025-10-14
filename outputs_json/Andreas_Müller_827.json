@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 53,
+  "years_experience": 31,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 511 0390",
+  "email": "andreas.mueller@gmx.ch",
+  "title": "Lead Data Scientist",
+  "industry": "Software"
+}

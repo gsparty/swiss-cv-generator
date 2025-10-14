@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Schneider",
+  "age": 52,
+  "years_experience": 30,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 785 7845",
+  "email": "claudia.schneider24@gmx.ch",
+  "title": "Principal Projektleiter",
+  "industry": "Engineering"
+}

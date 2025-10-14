@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Schneider",
+  "age": 50,
+  "years_experience": 28,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 347 8495",
+  "email": "sandra.schneider@sunrise.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

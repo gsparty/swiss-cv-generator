@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Martin",
+  "age": 59,
+  "years_experience": 37,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 064 0331",
+  "email": "luc.martin@sunrise.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

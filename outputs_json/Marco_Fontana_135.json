@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Fontana",
+  "age": 49,
+  "years_experience": 27,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 078 574 2103",
+  "email": "marco.fontana81@sunrise.ch",
+  "title": "Lead Senior Developer",
+  "industry": "Software"
+}

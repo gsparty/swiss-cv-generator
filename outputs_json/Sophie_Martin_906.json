@@ -1,0 +1,14 @@
+{
+  "first_name": "Sophie",
+  "last_name": "Martin",
+  "age": 30,
+  "years_experience": 8,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 202 4323",
+  "email": "sophie.martin@bluewin.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

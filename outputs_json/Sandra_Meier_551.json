@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Meier",
+  "age": 55,
+  "years_experience": 33,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 207 4862",
+  "email": "sandra.meier12@gmx.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

@@ -1,4 +1,4 @@
-ï»¿import json, os, sys, traceback
+import json, os, sys, traceback
 from types import SimpleNamespace
 
 # Import project modules
@@ -76,9 +76,9 @@ def main():
             if ok:
                 print("PDF created:", pdf_path)
             else:
-                print("exporters.export_pdf returned False â€” saved fallback HTML instead of PDF.")
+                print("exporters.export_pdf returned False — saved fallback HTML instead of PDF.")
         else:
-            print("No exporters.export_pdf available â€” kept HTML at", html_path)
+            print("No exporters.export_pdf available — kept HTML at", html_path)
     except Exception:
         print("PDF rendering failed; traceback:")
         traceback.print_exc()

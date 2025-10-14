@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Meier",
+  "age": 39,
+  "years_experience": 17,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 599 4068",
+  "email": "michael.meier@sunrise.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

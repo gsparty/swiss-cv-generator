@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 37,
+  "years_experience": 15,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 853 5453",
+  "email": "michael.keller@sunrise.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

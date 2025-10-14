@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Müller",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 942 3988",
+  "email": "sandra.mueller@gmx.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

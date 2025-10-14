@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Meier",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 173 8223",
+  "email": "stefan.meier@gmx.ch",
+  "title": "Junior Analyst",
+  "industry": "Finance"
+}

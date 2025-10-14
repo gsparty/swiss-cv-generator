@@ -1,0 +1,14 @@
+{
+  "first_name": "Sophie",
+  "last_name": "Bernard",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 950 7468",
+  "email": "sophie.bernard@sunrise.ch",
+  "title": "Junior Data Scientist",
+  "industry": "Software"
+}

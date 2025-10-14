@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Schneider",
+  "age": 57,
+  "years_experience": 35,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 648 5750",
+  "email": "stefan.schneider@gmx.ch",
+  "title": "Principal Senior Developer",
+  "industry": "Software"
+}

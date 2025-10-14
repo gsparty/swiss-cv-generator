@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Rossi",
+  "age": 24,
+  "years_experience": 2,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 135 0800",
+  "email": "marco.rossi@gmx.ch",
+  "title": "Projektleiter",
+  "industry": "Engineering"
+}

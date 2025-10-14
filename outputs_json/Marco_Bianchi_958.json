@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Bianchi",
+  "age": 56,
+  "years_experience": 34,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 110 4849",
+  "email": "marco.bianchi@bluewin.ch",
+  "title": "Principal Projektleiter",
+  "industry": "Engineering"
+}

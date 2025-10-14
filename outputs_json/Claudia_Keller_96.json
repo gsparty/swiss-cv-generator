@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Keller",
+  "age": 33,
+  "years_experience": 11,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 779 8703",
+  "email": "claudia.keller@gmx.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

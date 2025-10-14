@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Schneider",
+  "age": 33,
+  "years_experience": 11,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 750 5291",
+  "email": "michael.schneider@sunrise.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

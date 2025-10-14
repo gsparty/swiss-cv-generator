@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Dubois",
+  "age": 35,
+  "years_experience": 13,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 379 1572",
+  "email": "marie.dubois@sunrise.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

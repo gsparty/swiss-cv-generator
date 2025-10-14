@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 43,
+  "years_experience": 21,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 986 8581",
+  "email": "andreas.mueller52@sunrise.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

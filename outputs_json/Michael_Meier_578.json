@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Meier",
+  "age": 54,
+  "years_experience": 32,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 582 2265",
+  "email": "michael.meier@sunrise.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

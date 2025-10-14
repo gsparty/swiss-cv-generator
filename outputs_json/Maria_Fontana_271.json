@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Fontana",
+  "age": 32,
+  "years_experience": 10,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 078 472 2282",
+  "email": "maria.fontana@gmx.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Luca",
+  "last_name": "Fontana",
+  "age": 26,
+  "years_experience": 4,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 076 483 4608",
+  "email": "luca.fontana@sunrise.ch",
+  "title": "Junior Analyst",
+  "industry": "Finance"
+}

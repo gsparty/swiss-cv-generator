@@ -9,7 +9,7 @@ This loader:
  - writes a CSV to out_csv
 
 Usage:
-    from swiss_cv_generator.data_loaders.bfs_loader import fetch_bfs_table_by_id
+    from swiss_cv.data_loaders.bfs_loader import fetch_bfs_table_by_id
     df = fetch_bfs_table_by_id("px-x-0102010000_101", "data/raw/canton_population.csv", language="en")
 
 Note: pxwebpy will request JSON-stat2 and parse metadata properly.
@@ -94,3 +94,4 @@ if __name__ == '__main__':
             print(f"failed for {lang}: {e}")
     if len(tried) == 4:
         print("All language attempts failed; see exceptions above for details.")
+

@@ -55,12 +55,13 @@ def generate(count, output_dir, format, seed):
         if "json" in formats:
             out_json = os.path.join(output_dir, base + ".json")
             export_json(persona, out_json)
-            console.log(f"Wrote JSON → {out_json}")
+            console.log(f"Wrote JSON ? {out_json}")
         if "pdf" in formats:
             out_pdf = os.path.join(output_dir, base + ".pdf")
             export_pdf(persona, out_pdf)
-            console.log(f"Wrote PDF  → {out_pdf}")
+            console.log(f"Wrote PDF  ? {out_pdf}")
 
 
 if __name__ == "__main__":
     cli()
+

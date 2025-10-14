@@ -52,3 +52,4 @@ def render_pdf_from_html_string(html_string, out_path):
         with open(fallback, "w", encoding="utf-8") as fh:
             fh.write(html_string)
         return False
+

@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Fontana",
+  "age": 27,
+  "years_experience": 5,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 052 3876",
+  "email": "marco.fontana@bluewin.ch",
+  "title": "Projektleiter",
+  "industry": "Engineering"
+}

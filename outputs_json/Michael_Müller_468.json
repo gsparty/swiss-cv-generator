@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Müller",
+  "age": 22,
+  "years_experience": 0,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 393 7717",
+  "email": "michael.mueller@gmx.ch",
+  "title": "Junior Software Engineer",
+  "industry": "Software"
+}

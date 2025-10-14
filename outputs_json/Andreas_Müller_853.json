@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 59,
+  "years_experience": 37,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 550 7122",
+  "email": "andreas.mueller@sunrise.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 45,
+  "years_experience": 23,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 218 1582",
+  "email": "michael.keller@bluewin.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

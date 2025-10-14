@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Bianchi",
+  "age": 48,
+  "years_experience": 26,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 078 647 6652",
+  "email": "maria.bianchi@sunrise.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

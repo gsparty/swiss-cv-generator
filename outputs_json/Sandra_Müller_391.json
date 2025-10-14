@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Müller",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 944 3193",
+  "email": "sandra.mueller@gmx.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

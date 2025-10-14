@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Fontana",
+  "age": 26,
+  "years_experience": 4,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 030 1211",
+  "email": "maria.fontana@sunrise.ch",
+  "title": "Junior Senior Developer",
+  "industry": "Software"
+}

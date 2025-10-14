@@ -1,19 +1,16 @@
+asyncio
 click>=8.0
-rich>=13.0
-pydantic>=1.10
 jinja2>=3.0
-weasyprint>=55.0   # optional: if WeasyPrint is hard to install, use HTML output fallback
+jsonschema
 openai>=0.27
-pytest
+pandas
+pydantic
+pydantic>=1.10
 pydantic>=1.10,<2
 pytest
-
-# pydantic models + BFS loader
-pydantic
-requests
-pandas
 python-dotenv
-
-# CLI + schema validation
+requests
+rich>=13.0
 typer
-jsonschema
+typer>=0.9.0
+weasyprint>=55.0   # optional: if WeasyPrint is hard to install, use HTML output fallback

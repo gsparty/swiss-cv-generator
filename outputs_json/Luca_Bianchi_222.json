@@ -1,0 +1,14 @@
+{
+  "first_name": "Luca",
+  "last_name": "Bianchi",
+  "age": 36,
+  "years_experience": 14,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 218 5411",
+  "email": "luca.bianchi@bluewin.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

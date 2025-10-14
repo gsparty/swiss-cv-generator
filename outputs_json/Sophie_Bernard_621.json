@@ -1,0 +1,14 @@
+{
+  "first_name": "Sophie",
+  "last_name": "Bernard",
+  "age": 34,
+  "years_experience": 12,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 152 2945",
+  "email": "sophie.bernard@sunrise.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

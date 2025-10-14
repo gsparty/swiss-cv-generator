@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Keller",
+  "age": 30,
+  "years_experience": 8,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 073 8236",
+  "email": "sandra.keller@sunrise.ch",
+  "title": "Data Scientist",
+  "industry": "Software"
+}

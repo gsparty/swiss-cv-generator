@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Bianchi",
+  "age": 47,
+  "years_experience": 25,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 078 865 2918",
+  "email": "marco.bianchi5@sunrise.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

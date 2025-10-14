@@ -1,0 +1,14 @@
+{
+  "first_name": "Sophie",
+  "last_name": "Martin",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 328 4210",
+  "email": "sophie.martin61@gmx.ch",
+  "title": "Data Scientist",
+  "industry": "Software"
+}

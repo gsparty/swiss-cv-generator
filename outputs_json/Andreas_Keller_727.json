@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 23,
+  "years_experience": 1,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 844 1211",
+  "email": "andreas.keller@gmx.ch",
+  "title": "Junior Data Scientist",
+  "industry": "Software"
+}

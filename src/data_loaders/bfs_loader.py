@@ -34,3 +34,4 @@ def load_processed_population(processed_path: str = "data/processed/pop_by_canto
                 json.dump(out, f, ensure_ascii=False, indent=2)
             return out
     raise FileNotFoundError(f"Processed population not found at {processed_path} and no CSV fallback present.")
+

@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Rossi",
+  "age": 24,
+  "years_experience": 2,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 053 1455",
+  "email": "maria.rossi7@gmx.ch",
+  "title": "Junior Software Engineer",
+  "industry": "Software"
+}

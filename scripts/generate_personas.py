@@ -1,5 +1,5 @@
-﻿from swiss_cv_generator.models import SwissPersona, EducationEntry, ExperienceEntry
-from swiss_cv_generator.sampler import sample_canton, sample_age, compute_years_experience_from_age
+from swiss_cv.models import SwissPersona, EducationEntry, ExperienceEntry
+from swiss_cv.sampler import sample_canton, sample_age, compute_years_experience_from_age
 import os, json, uuid, random, datetime
 
 CURRENT_YEAR = datetime.date.today().year

@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Schneider",
+  "age": 56,
+  "years_experience": 34,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 984 4659",
+  "email": "sandra.schneider@bluewin.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

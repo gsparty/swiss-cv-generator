@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Rossi",
+  "age": 30,
+  "years_experience": 8,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 076 269 6003",
+  "email": "marco.rossi97@bluewin.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

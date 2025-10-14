@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Martin",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 765 1342",
+  "email": "marie.martin@gmx.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 48,
+  "years_experience": 26,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 407 0904",
+  "email": "andreas.keller@bluewin.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}

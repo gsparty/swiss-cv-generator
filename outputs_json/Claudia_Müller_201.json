@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Müller",
+  "age": 60,
+  "years_experience": 38,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 562 1105",
+  "email": "claudia.mueller@bluewin.ch",
+  "title": "Lead Senior Developer",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Luca",
+  "last_name": "Rossi",
+  "age": 39,
+  "years_experience": 17,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 542 2941",
+  "email": "luca.rossi@bluewin.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}

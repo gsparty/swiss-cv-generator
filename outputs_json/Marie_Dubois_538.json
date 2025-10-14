@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Dubois",
+  "age": 60,
+  "years_experience": 38,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 414 8128",
+  "email": "marie.dubois83@gmx.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

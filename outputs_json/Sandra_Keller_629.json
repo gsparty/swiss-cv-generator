@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Keller",
+  "age": 41,
+  "years_experience": 19,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 554 5120",
+  "email": "sandra.keller@gmx.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Dubois",
+  "age": 50,
+  "years_experience": 28,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 241 0494",
+  "email": "luc.dubois@gmx.ch",
+  "title": "Lead Senior Developer",
+  "industry": "Software"
+}

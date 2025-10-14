@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Müller",
+  "age": 26,
+  "years_experience": 4,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 834 0462",
+  "email": "stefan.mueller9@sunrise.ch",
+  "title": "Senior Developer",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Keller",
+  "age": 22,
+  "years_experience": 0,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 399 3025",
+  "email": "sandra.keller@bluewin.ch",
+  "title": "Junior Software Engineer",
+  "industry": "Software"
+}

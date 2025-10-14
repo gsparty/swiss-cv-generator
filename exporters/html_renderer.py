@@ -17,3 +17,4 @@ def render_html(persona, template_name="templates/cv_de.html"):
     tpl = env.get_template(tpl_name)
     html = tpl.render(persona=vars(persona))
     return html
+

@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Schneider",
+  "age": 50,
+  "years_experience": 28,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 311 9434",
+  "email": "claudia.schneider@gmx.ch",
+  "title": "Principal Senior Developer",
+  "industry": "Software"
+}

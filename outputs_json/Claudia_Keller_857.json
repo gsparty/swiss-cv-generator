@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Keller",
+  "age": 40,
+  "years_experience": 18,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 757 5175",
+  "email": "claudia.keller@bluewin.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

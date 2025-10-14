@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 28,
+  "years_experience": 6,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 288 4228",
+  "email": "andreas.mueller41@bluewin.ch",
+  "title": "Data Scientist",
+  "industry": "Software"
+}

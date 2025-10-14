@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Keller",
+  "age": 36,
+  "years_experience": 14,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 753 9623",
+  "email": "claudia.keller@gmx.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}
