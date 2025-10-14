@@ -1,4 +1,19 @@
-﻿import os
+﻿# --- start: local openai shim injection (auto-generated) ---
+try:
+    import sys, types
+    # Attempt to load our compatibility shim (swiss_cv.openai_compat) and expose ChatCompletion
+    try:
+        from swiss_cv.openai_compat import ChatCompletion as ChatCompletionCompat
+    except Exception:
+        ChatCompletionCompat = None
+    # Create a minimal module object and inject it so subsequent import openai uses this shim
+    _openai_mod = types.SimpleNamespace(ChatCompletion=ChatCompletionCompat)
+    sys.modules.setdefault('openai', _openai_mod)
+except Exception:
+    # intentionally silent — if this fails we won't break the CLI startup
+    pass
+# --- end: local openai shim injection ---
+import os
 import random
 from pathlib import Path
 
@@ -9,6 +24,13 @@ from .swiss_cv.data_loaders import (load_cantons, load_companies,
                                     load_occupations, sample_weighted)
 from .swiss_cv.exporters import export_json, export_pdf
 from .swiss_cv.generators import generate_persona
+
+from swiss_cv.text_utils import normalize_for_output
+
+first = normalize_for_output(persona.get('first_name') or persona.get('firstname') or '')
+last  = normalize_for_output(persona.get('last_name') or persona.get('lastname') or '')
+safe_name = f"{first.strip().replace(' ', '_')}_{last.strip().replace(' ', '_')}"
+
 
 console = Console()
 
@@ -64,4 +86,5 @@ def generate(count, output_dir, format, seed):
 
 if __name__ == "__main__":
     cli()
+
 
