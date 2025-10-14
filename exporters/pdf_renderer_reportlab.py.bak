@@ -38,6 +38,14 @@ styles.add(ParagraphStyle(
     fontName=DEFAULT_FONT,
     fontSize=11,
     leading=13,
+# DEBUG: show resolved FONT_PATH and DEFAULT_FONT at import time
+try:
+    _dbg_fp = FONT_PATH if 'FONT_PATH' in globals() else None
+    _dbg_df = DEFAULT_FONT if 'DEFAULT_FONT' in globals() else None
+    print(f"[DEBUG] pdf_renderer_reportlab FONT_PATH={_dbg_fp} DEFAULT_FONT={_dbg_df}")
+except Exception:
+    pass
+
     spaceBefore=6,
     spaceAfter=4,
     textColor="#333333",
@@ -132,3 +140,4 @@ def render_pdf(persona, output_path):
         c.drawString(40, 780, "Failed to render full layout; minimal PDF generated")
         c.save()
         raise
+
