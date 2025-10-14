@@ -156,3 +156,4 @@ class OpenAIClient:
 # Single shared client for easy import
 client = OpenAIClient()
 
+

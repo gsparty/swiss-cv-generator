@@ -1,37 +1,43 @@
 ﻿# Compatibility shim to emulate a subset of openai.ChatCompletion.create()
 # Delegates to swiss_cv.openai_wrapper.client.chat() for actual calls.
-from typing import Any, Dict
+from typing import Any, Dict, List, Optional
 from dataclasses import dataclass
+from pathlib import Path
 import json
 
-try:
-    from .openai_wrapper import client as _client
-except Exception:
-    # fallback: try top-level import (for different PYTHONPATH setups)
+# Try to import the wrapper client from a couple of likely locations
+_client = None
+for _p in ('swiss_cv.openai_wrapper', '.src.swiss_cv.openai_wrapper', 'src.swiss_cv.openai_wrapper'):
     try:
-        from swiss_cv.openai_wrapper import client as _client
+        mod = __import__(_p, fromlist=['client'])
+        _client = getattr(mod, 'client', None)
+        if _client is not None:
+            break
     except Exception:
-        _client = None
+        continue
 
-@dataclass
-class _Choice:
-    message: Dict[str, Any]
-
-def _format_response(text: str):
-    # Return a dict with choices[0].message.content shape
+def _format_response(text: str) -> Dict[str, Any]:
+    # minimal shape compatible with old code: {'choices':[{'message':{'content': text}}]}
     return {'choices': [{'message': {'content': text}}]}
 
 class ChatCompletion:
     @staticmethod
-    def create(model=None, messages=None, temperature: float=0.7, max_tokens: int=256, **kwargs):
+    def create(model: Optional[str]=None, messages: Optional[List[Dict[str,str]]]=None,
+               temperature: float=0.7, max_tokens: int=256, **kwargs):
         if _client is None:
-            raise RuntimeError('OpenAI client wrapper not available')
-        # convert messages to text if provided as list of dicts
-        if messages and isinstance(messages, list):
-            # join user/system messages to a single prompt
-            prompt = '\\n'.join([m.get('content','') for m in messages])
+            raise RuntimeError('OpenAI client wrapper not available (openai_compat failed to find wrapper)')
+        # If messages is a list of dicts like [{'role':'user','content':'...'}, ...]
+        if isinstance(messages, list):
+            # join all content fields preserving order (old call sites typically expect a single reply)
+            prompt = "\\n".join([m.get('content','') for m in messages if isinstance(m, dict)])
+        elif isinstance(messages, str) or messages is None:
+            prompt = messages or ""
         else:
+            # fallback: try to stringify
             prompt = str(messages)
-        # delegate to wrapper.chat (which handles retries)
+        # Delegate to wrapper.client.chat -- wrapper should return a text string
         text = _client.chat(messages=[{'role':'user','content':prompt}], temperature=temperature, max_tokens=max_tokens)
-        return _format_response(text)
+        # If wrapper returns an object with 'content', extract it
+        if isinstance(text, dict) and 'content' in text:
+            text = text['content']
+        return _format_response(str(text))
