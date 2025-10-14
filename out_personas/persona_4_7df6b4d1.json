@@ -1,0 +1,45 @@
+{
+  "id": "7df6b4d1-4f80-4a1b-8c80-0ef576976a40",
+  "first_name": "Sophie",
+  "last_name": "Frey",
+  "gender": "female",
+  "canton": "BE",
+  "language": "de",
+  "age": 59,
+  "birth_year": 1966,
+  "years_experience": 37,
+  "seniority": "lead",
+  "industry": "finance",
+  "current_title": "Consultant",
+  "email": "sophie.frey@gmx.ch",
+  "phone": "+41790504967",
+  "address": null,
+  "skills": [
+    "communication",
+    "problem solving"
+  ],
+  "languages_spoken": [
+    "de"
+  ],
+  "education": [
+    {
+      "institution": "University",
+      "degree": "BSc",
+      "field": "Computer Science",
+      "start_year": 34,
+      "end_year": 37
+    }
+  ],
+  "experience": [
+    {
+      "title": "Manager",
+      "company": "ACME AG",
+      "canton": null,
+      "start_year": 1988,
+      "end_year": null,
+      "description": "Worked on projects and delivered value.",
+      "seniority": null
+    }
+  ],
+  "summary": "Sophie Frey is a 37-year experienced professional in project management."
+}

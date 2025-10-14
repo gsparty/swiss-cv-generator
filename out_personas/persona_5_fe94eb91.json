@@ -1,0 +1,45 @@
+{
+  "id": "fe94eb91-725b-4e69-b0bc-d6d0671ca314",
+  "first_name": "Julie",
+  "last_name": "Bernard",
+  "gender": "male",
+  "canton": "GE",
+  "language": "fr",
+  "age": 51,
+  "birth_year": 1974,
+  "years_experience": 24,
+  "seniority": "lead",
+  "industry": "technology",
+  "current_title": "Software Engineer",
+  "email": "julie.bernard@example.ch",
+  "phone": "+41799510728",
+  "address": null,
+  "skills": [
+    "communication",
+    "problem solving"
+  ],
+  "languages_spoken": [
+    "fr"
+  ],
+  "education": [
+    {
+      "institution": "University",
+      "degree": "BSc",
+      "field": "Computer Science",
+      "start_year": 26,
+      "end_year": 29
+    }
+  ],
+  "experience": [
+    {
+      "title": "Analyst",
+      "company": "ACME AG",
+      "canton": null,
+      "start_year": 2001,
+      "end_year": null,
+      "description": "Worked on projects and delivered value.",
+      "seniority": null
+    }
+  ],
+  "summary": "Julie Bernard is a 24-year experienced professional in software."
+}
