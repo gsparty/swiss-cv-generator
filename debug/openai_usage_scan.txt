@@ -1,0 +1,7 @@
+﻿
+Path                                                          LineNumber Line                            
+----                                                          ---------- ----                            
+C:\Projects\swiss-cv-generator\src\swiss_cv\openai_client.py           1 # src/openai_client.py          
+C:\Projects\swiss-cv-generator\src\swiss_cv\openai_wrapper.py          5     import openai as _openai_pkg
+
+
