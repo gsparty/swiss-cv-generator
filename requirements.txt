@@ -5,3 +5,5 @@ jinja2>=3.0
 weasyprint>=55.0   # optional: if WeasyPrint is hard to install, use HTML output fallback
 openai>=0.27
 pytest
+pydantic>=1.10,<2
+pytest
