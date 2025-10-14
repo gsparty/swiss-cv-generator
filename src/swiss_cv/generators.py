@@ -156,3 +156,36 @@ def generate_persona(seed: Optional[int] = None, canton: Optional[Any] = None,
 
     clazz = SwissPersona or None
     return _instantiate_persona_class(clazz, persona_dict)
+
+# ---- Added helper: make persona JSON-serializable without changing existing API ----
+def to_builtin(o):
+    """
+    Recursively convert SimpleNamespace/dict/list into builtin types for JSON serialization.
+    Safe helper — does not mutate the originals.
+    """
+    from types import SimpleNamespace
+    if isinstance(o, SimpleNamespace):
+        return {k: to_builtin(v) for k, v in vars(o).items()}
+    if isinstance(o, dict):
+        return {k: to_builtin(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [to_builtin(i) for i in o]
+    return o
+
+def generate_persona_jsonable(*args, **kwargs):
+    """
+    Wrapper: call generate_persona and convert result to plain Python builtins
+    so callers can JSON-dump it directly.
+    """
+    # import locally to avoid circular/top-level import surprises
+    try:
+        gen = globals().get('generate_persona')
+        if gen is None:
+            # fallback: try importing
+            from src.swiss_cv.generators import generate_persona as gen
+    except Exception:
+        # if something odd, raise normally
+        raise
+    persona = gen(*args, **kwargs)
+    return to_builtin(persona)
+# ---- end added helper ----
