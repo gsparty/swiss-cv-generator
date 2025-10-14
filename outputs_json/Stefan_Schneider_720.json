@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Schneider",
+  "age": 43,
+  "years_experience": 21,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 338 2306",
+  "email": "stefan.schneider20@sunrise.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

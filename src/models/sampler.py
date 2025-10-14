@@ -1,4 +1,4 @@
-import json
+﻿import json
 import random
 from typing import Optional
 from src.data_loaders import bfs_loader
@@ -22,3 +22,4 @@ def sample_canton(processed_json_path: str = 'data/processed/pop_by_canton.json'
         if r <= cum:
             return c
     return cantons[-1]
+

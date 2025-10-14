@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Bernard",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 116 8576",
+  "email": "luc.bernard81@bluewin.ch",
+  "title": "Projektleiter",
+  "industry": "Engineering"
+}

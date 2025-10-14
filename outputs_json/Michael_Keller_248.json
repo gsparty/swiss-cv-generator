@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 40,
+  "years_experience": 18,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 343 3569",
+  "email": "michael.keller@gmx.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

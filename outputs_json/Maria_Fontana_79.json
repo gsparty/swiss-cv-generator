@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Fontana",
+  "age": 37,
+  "years_experience": 15,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 076 057 0782",
+  "email": "maria.fontana@gmx.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

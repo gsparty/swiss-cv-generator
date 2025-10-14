@@ -1,0 +1,14 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Martin",
+  "age": 23,
+  "years_experience": 1,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 902 0803",
+  "email": "pierre.martin@sunrise.ch",
+  "title": "Junior Junior Analyst",
+  "industry": "Finance"
+}

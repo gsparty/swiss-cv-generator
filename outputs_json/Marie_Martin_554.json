@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Martin",
+  "age": 32,
+  "years_experience": 10,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 567 5929",
+  "email": "marie.martin@gmx.ch",
+  "title": "Junior Analyst",
+  "industry": "Finance"
+}

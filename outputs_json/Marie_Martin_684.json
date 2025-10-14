@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Martin",
+  "age": 35,
+  "years_experience": 13,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 150 0502",
+  "email": "marie.martin@bluewin.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

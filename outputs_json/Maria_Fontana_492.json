@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Fontana",
+  "age": 54,
+  "years_experience": 32,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 462 6760",
+  "email": "maria.fontana@bluewin.ch",
+  "title": "Lead Data Scientist",
+  "industry": "Software"
+}

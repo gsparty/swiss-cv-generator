@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Dubois",
+  "age": 26,
+  "years_experience": 4,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 448 9123",
+  "email": "marie.dubois@bluewin.ch",
+  "title": "Senior Developer",
+  "industry": "Software"
+}

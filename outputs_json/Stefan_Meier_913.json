@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Meier",
+  "age": 23,
+  "years_experience": 1,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 761 0522",
+  "email": "stefan.meier@gmx.ch",
+  "title": "Junior Senior Developer",
+  "industry": "Software"
+}

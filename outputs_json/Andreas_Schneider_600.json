@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 26,
+  "years_experience": 4,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 366 6993",
+  "email": "andreas.schneider9@bluewin.ch",
+  "title": "Software Engineer",
+  "industry": "Software"
+}

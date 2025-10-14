@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 648 8874",
+  "email": "andreas.keller64@bluewin.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

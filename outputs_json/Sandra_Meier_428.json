@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Meier",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 271 7497",
+  "email": "sandra.meier@sunrise.ch",
+  "title": "Projektleiter",
+  "industry": "Engineering"
+}

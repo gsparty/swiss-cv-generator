@@ -1,0 +1,14 @@
+{
+  "first_name": "Luca",
+  "last_name": "Bianchi",
+  "age": 59,
+  "years_experience": 37,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 485 7934",
+  "email": "luca.bianchi@bluewin.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

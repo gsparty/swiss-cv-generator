@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Bernard",
+  "age": 48,
+  "years_experience": 26,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 162 5811",
+  "email": "luc.bernard93@gmx.ch",
+  "title": "Principal Senior Developer",
+  "industry": "Software"
+}

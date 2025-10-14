@@ -1,4 +1,4 @@
-"""
+ï»¿"""
 sampler.py
 
 Population-weighted canton sampler + simple age/experience heuristics.
@@ -25,7 +25,7 @@ import random
 # Minimal fallback populations (approximate, for dev only).
 # Replace these numbers with official BFS canton totals when you have the CSV.
 FALLBACK_POPULATIONS = {
-    "ZH": 1620000,  # Zürich
+    "ZH": 1620000,  # ZÃ¼rich
     "BE": 1100000,  # Bern
     "LU": 430000,   # Luzern
     "UR": 38000,    # Uri
@@ -42,13 +42,13 @@ FALLBACK_POPULATIONS = {
     "AR": 56000,    # Appenzell Ausserrhoden
     "AI": 16000,    # Appenzell Innerrhoden
     "SG": 510000,   # St. Gallen
-    "GR": 200000,   # Graubünden
+    "GR": 200000,   # GraubÃ¼nden
     "AG": 730000,   # Aargau
     "TG": 289000,   # Thurgau
     "TI": 390000,   # Ticino
     "VD": 830000,   # Vaud
     "VS": 352000,   # Valais
-    "NE": 170000,   # Neuchâtel
+    "NE": 170000,   # NeuchÃ¢tel
     "GE": 530000,   # Geneva
     "JU": 73000     # Jura
 }
@@ -151,3 +151,4 @@ if __name__ == "__main__":
             break
         print(f"  {k}: {v:,}")
     print("Sampling 10 cantons (seed=42):", sample_cantons(10, seed=42))
+

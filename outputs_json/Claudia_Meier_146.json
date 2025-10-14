@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Meier",
+  "age": 42,
+  "years_experience": 20,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 161 8371",
+  "email": "claudia.meier65@sunrise.ch",
+  "title": "Principal Senior Developer",
+  "industry": "Software"
+}

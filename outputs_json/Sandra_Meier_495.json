@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Meier",
+  "age": 54,
+  "years_experience": 32,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 839 9477",
+  "email": "sandra.meier@sunrise.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}

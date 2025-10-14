@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Müller",
+  "age": 40,
+  "years_experience": 18,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 824 1227",
+  "email": "sandra.mueller@bluewin.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

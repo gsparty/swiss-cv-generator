@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Meier",
+  "age": 45,
+  "years_experience": 23,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 605 6042",
+  "email": "stefan.meier@sunrise.ch",
+  "title": "Lead Junior Analyst",
+  "industry": "Finance"
+}

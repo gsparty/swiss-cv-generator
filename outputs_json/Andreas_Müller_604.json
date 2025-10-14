@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 41,
+  "years_experience": 19,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 441 0758",
+  "email": "andreas.mueller@sunrise.ch",
+  "title": "Principal Projektleiter",
+  "industry": "Engineering"
+}

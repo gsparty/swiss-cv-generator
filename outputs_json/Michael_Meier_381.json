@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Meier",
+  "age": 24,
+  "years_experience": 2,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 295 6763",
+  "email": "michael.meier83@bluewin.ch",
+  "title": "Junior Data Scientist",
+  "industry": "Software"
+}

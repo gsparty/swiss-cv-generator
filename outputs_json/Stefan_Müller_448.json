@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Müller",
+  "age": 38,
+  "years_experience": 16,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 959 3716",
+  "email": "stefan.mueller@gmx.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Luca",
+  "last_name": "Bianchi",
+  "age": 53,
+  "years_experience": 31,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 076 669 1341",
+  "email": "luca.bianchi@sunrise.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

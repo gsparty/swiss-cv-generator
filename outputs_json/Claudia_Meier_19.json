@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Meier",
+  "age": 50,
+  "years_experience": 28,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 766 5676",
+  "email": "claudia.meier@gmx.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

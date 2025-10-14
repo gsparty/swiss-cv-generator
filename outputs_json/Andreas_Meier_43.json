@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Meier",
+  "age": 54,
+  "years_experience": 32,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 970 3153",
+  "email": "andreas.meier@gmx.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

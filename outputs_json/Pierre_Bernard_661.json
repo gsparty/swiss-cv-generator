@@ -1,0 +1,14 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Bernard",
+  "age": 53,
+  "years_experience": 31,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 869 9533",
+  "email": "pierre.bernard@bluewin.ch",
+  "title": "Principal Projektleiter",
+  "industry": "Engineering"
+}

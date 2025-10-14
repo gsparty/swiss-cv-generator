@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 49,
+  "years_experience": 27,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 534 2135",
+  "email": "andreas.mueller36@bluewin.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

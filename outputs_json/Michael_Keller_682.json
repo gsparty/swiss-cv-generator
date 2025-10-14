@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 30,
+  "years_experience": 8,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 371 0749",
+  "email": "michael.keller35@gmx.ch",
+  "title": "Projektleiter",
+  "industry": "Engineering"
+}

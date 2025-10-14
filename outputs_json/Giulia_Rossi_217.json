@@ -1,0 +1,14 @@
+{
+  "first_name": "Giulia",
+  "last_name": "Rossi",
+  "age": 42,
+  "years_experience": 20,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 078 116 1146",
+  "email": "giulia.rossi@bluewin.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}

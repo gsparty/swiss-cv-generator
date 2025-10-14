@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Dubois",
+  "age": 56,
+  "years_experience": 34,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 183 2419",
+  "email": "luc.dubois@bluewin.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

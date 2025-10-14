@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 42,
+  "years_experience": 20,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 182 8869",
+  "email": "michael.keller@sunrise.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

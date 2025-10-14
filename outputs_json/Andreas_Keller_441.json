@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 48,
+  "years_experience": 26,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 323 1958",
+  "email": "andreas.keller@sunrise.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

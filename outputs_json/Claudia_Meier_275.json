@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Meier",
+  "age": 32,
+  "years_experience": 10,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 920 0233",
+  "email": "claudia.meier@bluewin.ch",
+  "title": "Software Engineer",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 44,
+  "years_experience": 22,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 478 0824",
+  "email": "andreas.schneider@sunrise.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

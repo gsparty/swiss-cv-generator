@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Meier",
+  "age": 50,
+  "years_experience": 28,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 169 8755",
+  "email": "michael.meier@gmx.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

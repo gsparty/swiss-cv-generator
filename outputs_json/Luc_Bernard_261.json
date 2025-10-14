@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Bernard",
+  "age": 35,
+  "years_experience": 13,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 993 3331",
+  "email": "luc.bernard52@bluewin.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

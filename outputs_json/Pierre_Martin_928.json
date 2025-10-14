@@ -1,0 +1,14 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Martin",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 544 9071",
+  "email": "pierre.martin@gmx.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

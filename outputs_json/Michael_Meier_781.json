@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Meier",
+  "age": 50,
+  "years_experience": 28,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 065 3744",
+  "email": "michael.meier@bluewin.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

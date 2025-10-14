@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Meier",
+  "age": 32,
+  "years_experience": 10,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 280 7310",
+  "email": "claudia.meier79@bluewin.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

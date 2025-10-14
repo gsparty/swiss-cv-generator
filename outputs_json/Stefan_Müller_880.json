@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Müller",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 621 2327",
+  "email": "stefan.mueller@gmx.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

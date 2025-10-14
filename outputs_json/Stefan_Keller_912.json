@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Keller",
+  "age": 50,
+  "years_experience": 28,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 460 5654",
+  "email": "stefan.keller@sunrise.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

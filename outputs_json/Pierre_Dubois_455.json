@@ -1,0 +1,14 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Dubois",
+  "age": 38,
+  "years_experience": 16,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 372 4960",
+  "email": "pierre.dubois@gmx.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Dubois",
+  "age": 59,
+  "years_experience": 37,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 425 6051",
+  "email": "marie.dubois@sunrise.ch",
+  "title": "Lead Data Scientist",
+  "industry": "Software"
+}

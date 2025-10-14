@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Schneider",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 106 1857",
+  "email": "claudia.schneider@bluewin.ch",
+  "title": "Junior Software Engineer",
+  "industry": "Software"
+}

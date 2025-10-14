@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 39,
+  "years_experience": 17,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 367 2848",
+  "email": "andreas.mueller@gmx.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

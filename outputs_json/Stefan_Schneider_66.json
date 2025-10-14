@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Schneider",
+  "age": 40,
+  "years_experience": 18,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 684 2144",
+  "email": "stefan.schneider95@sunrise.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}

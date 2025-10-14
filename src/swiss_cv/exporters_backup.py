@@ -1,4 +1,4 @@
-# src/swiss_cv/exporters.py
+﻿# src/swiss_cv/exporters.py
 from __future__ import annotations
 
 import json
@@ -247,3 +247,4 @@ def export_pdf(persona: Dict[str, Any] | Any, out_path: str | Path, template_nam
     result_path = export_pdf_from_template(out, template_name, context)
     logging.info("Exported PDF/HTML -> %s", result_path)
     return result_path
+

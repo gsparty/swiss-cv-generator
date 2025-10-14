@@ -1,0 +1,14 @@
+{
+  "first_name": "Giulia",
+  "last_name": "Bianchi",
+  "age": 47,
+  "years_experience": 25,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 078 326 3448",
+  "email": "giulia.bianchi@bluewin.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

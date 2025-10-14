@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Schneider",
+  "age": 48,
+  "years_experience": 26,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 093 3435",
+  "email": "sandra.schneider7@gmx.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

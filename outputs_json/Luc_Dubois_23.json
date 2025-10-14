@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Dubois",
+  "age": 26,
+  "years_experience": 4,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 736 2930",
+  "email": "luc.dubois@sunrise.ch",
+  "title": "Projektleiter",
+  "industry": "Engineering"
+}

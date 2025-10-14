@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Dubois",
+  "age": 23,
+  "years_experience": 1,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 807 4483",
+  "email": "marie.dubois@sunrise.ch",
+  "title": "Junior Software Engineer",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 56,
+  "years_experience": 34,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 095 1661",
+  "email": "andreas.keller@gmx.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

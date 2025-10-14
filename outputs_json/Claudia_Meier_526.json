@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Meier",
+  "age": 28,
+  "years_experience": 6,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 537 3945",
+  "email": "claudia.meier@gmx.ch",
+  "title": "Senior Developer",
+  "industry": "Software"
+}

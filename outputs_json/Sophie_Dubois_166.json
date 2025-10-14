@@ -1,0 +1,14 @@
+{
+  "first_name": "Sophie",
+  "last_name": "Dubois",
+  "age": 28,
+  "years_experience": 6,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 594 6627",
+  "email": "sophie.dubois@bluewin.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

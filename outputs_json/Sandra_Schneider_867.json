@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Schneider",
+  "age": 22,
+  "years_experience": 0,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 992 1311",
+  "email": "sandra.schneider@bluewin.ch",
+  "title": "Junior Projektleiter",
+  "industry": "Engineering"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Bianchi",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 078 066 0665",
+  "email": "maria.bianchi@bluewin.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

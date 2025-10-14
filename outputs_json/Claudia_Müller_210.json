@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Müller",
+  "age": 57,
+  "years_experience": 35,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 555 6824",
+  "email": "claudia.mueller@gmx.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

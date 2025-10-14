@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Meier",
+  "age": 42,
+  "years_experience": 20,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 059 3905",
+  "email": "sandra.meier@bluewin.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

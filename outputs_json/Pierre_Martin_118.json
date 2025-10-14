@@ -1,0 +1,14 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Martin",
+  "age": 24,
+  "years_experience": 2,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 064 5696",
+  "email": "pierre.martin@sunrise.ch",
+  "title": "Software Engineer",
+  "industry": "Software"
+}

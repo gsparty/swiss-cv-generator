@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 56,
+  "years_experience": 34,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 500 1928",
+  "email": "andreas.keller@sunrise.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

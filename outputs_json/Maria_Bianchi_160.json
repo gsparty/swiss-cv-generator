@@ -1,0 +1,14 @@
+{
+  "first_name": "Maria",
+  "last_name": "Bianchi",
+  "age": 47,
+  "years_experience": 25,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 076 656 4337",
+  "email": "maria.bianchi@sunrise.ch",
+  "title": "Senior Projektleiter",
+  "industry": "Engineering"
+}

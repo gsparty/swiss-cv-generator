@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Meier",
+  "age": 45,
+  "years_experience": 23,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 162 8228",
+  "email": "sandra.meier@sunrise.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

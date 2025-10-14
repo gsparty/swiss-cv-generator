@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Müller",
+  "age": 58,
+  "years_experience": 36,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 866 7427",
+  "email": "claudia.mueller@bluewin.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

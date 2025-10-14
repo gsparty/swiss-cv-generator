@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Bernard",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 683 9034",
+  "email": "marie.bernard@gmx.ch",
+  "title": "Data Scientist",
+  "industry": "Software"
+}

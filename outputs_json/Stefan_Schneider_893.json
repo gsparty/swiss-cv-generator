@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Schneider",
+  "age": 45,
+  "years_experience": 23,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 449 0882",
+  "email": "stefan.schneider@bluewin.ch",
+  "title": "Lead Data Scientist",
+  "industry": "Software"
+}

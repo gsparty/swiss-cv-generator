@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Meier",
+  "age": 49,
+  "years_experience": 27,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 284 0091",
+  "email": "stefan.meier@gmx.ch",
+  "title": "Lead Data Scientist",
+  "industry": "Software"
+}

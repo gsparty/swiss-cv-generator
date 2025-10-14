@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Keller",
+  "age": 53,
+  "years_experience": 31,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 644 1987",
+  "email": "stefan.keller@bluewin.ch",
+  "title": "Lead Junior Analyst",
+  "industry": "Finance"
+}

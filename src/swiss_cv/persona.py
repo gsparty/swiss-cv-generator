@@ -1,4 +1,4 @@
-import random
+﻿import random
 from dataclasses import asdict, dataclass, field
 from typing import Optional
 
@@ -21,3 +21,4 @@ class SwissPersona:
 
     def to_dict(self):
         return asdict(self)
+

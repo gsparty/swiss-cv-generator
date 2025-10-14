@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Meier",
+  "age": 36,
+  "years_experience": 14,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 870 5125",
+  "email": "andreas.meier92@gmx.ch",
+  "title": "Lead Junior Analyst",
+  "industry": "Finance"
+}

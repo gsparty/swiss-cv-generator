@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Müller",
+  "age": 60,
+  "years_experience": 38,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 884 9889",
+  "email": "stefan.mueller@gmx.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

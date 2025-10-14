@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Meier",
+  "age": 23,
+  "years_experience": 1,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 427 8076",
+  "email": "sandra.meier@bluewin.ch",
+  "title": "Junior Projektleiter",
+  "industry": "Engineering"
+}

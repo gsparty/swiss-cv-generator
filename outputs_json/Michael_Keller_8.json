@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Keller",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 290 3226",
+  "email": "michael.keller@sunrise.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

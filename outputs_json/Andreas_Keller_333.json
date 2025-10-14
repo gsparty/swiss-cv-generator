@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Keller",
+  "age": 40,
+  "years_experience": 18,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 797 6959",
+  "email": "andreas.keller@gmx.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Keller",
+  "age": 30,
+  "years_experience": 8,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 932 5475",
+  "email": "stefan.keller@gmx.ch",
+  "title": "Junior Analyst",
+  "industry": "Finance"
+}

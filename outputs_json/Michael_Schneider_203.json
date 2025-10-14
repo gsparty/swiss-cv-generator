@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Schneider",
+  "age": 59,
+  "years_experience": 37,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 335 5428",
+  "email": "michael.schneider37@gmx.ch",
+  "title": "Lead Senior Developer",
+  "industry": "Software"
+}

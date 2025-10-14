@@ -1,0 +1,14 @@
+{
+  "first_name": "Luca",
+  "last_name": "Fontana",
+  "age": 35,
+  "years_experience": 13,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 804 0433",
+  "email": "luca.fontana46@gmx.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

@@ -1,4 +1,4 @@
-import os
+﻿import os
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 def render_html(persona, template_name="templates/cv_de.html"):
@@ -17,3 +17,4 @@ def render_html(persona, template_name="templates/cv_de.html"):
     tpl = env.get_template(tpl_name)
     html = tpl.render(persona=vars(persona))
     return html
+

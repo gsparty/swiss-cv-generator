@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Meier",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 191 2348",
+  "email": "stefan.meier41@gmx.ch",
+  "title": "Principal Projektleiter",
+  "industry": "Engineering"
+}

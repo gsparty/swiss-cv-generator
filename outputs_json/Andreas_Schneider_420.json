@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Schneider",
+  "age": 31,
+  "years_experience": 9,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 148 9415",
+  "email": "andreas.schneider@bluewin.ch",
+  "title": "Data Scientist",
+  "industry": "Software"
+}

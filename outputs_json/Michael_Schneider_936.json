@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Schneider",
+  "age": 37,
+  "years_experience": 15,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 648 6288",
+  "email": "michael.schneider@bluewin.ch",
+  "title": "Lead Senior Developer",
+  "industry": "Software"
+}

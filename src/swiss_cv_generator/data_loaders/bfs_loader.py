@@ -1,4 +1,4 @@
-"""
+﻿"""
 BFS / PxWeb loader using pxwebpy (more robust than raw requests).
 
 This loader:
@@ -32,7 +32,7 @@ def _build_select_all_query(tbl: PxTable):
     # pxwebpy returns values as strings (labels). We'll pass them directly.
     query = {}
     for var, values in variables.items():
-        # Some variables include an entry like 'tabellinneh�ll' that is not desirable; keep everything for full export
+        # Some variables include an entry like 'tabellinnehåll' that is not desirable; keep everything for full export
         query[var] = values
     return query
 
@@ -94,3 +94,4 @@ if __name__ == '__main__':
             print(f"failed for {lang}: {e}")
     if len(tried) == 4:
         print("All language attempts failed; see exceptions above for details.")
+

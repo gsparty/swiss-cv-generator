@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Bernard",
+  "age": 24,
+  "years_experience": 2,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 125 7163",
+  "email": "luc.bernard@gmx.ch",
+  "title": "Projektleiter",
+  "industry": "Engineering"
+}

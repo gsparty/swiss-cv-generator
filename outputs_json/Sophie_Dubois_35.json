@@ -1,0 +1,14 @@
+{
+  "first_name": "Sophie",
+  "last_name": "Dubois",
+  "age": 33,
+  "years_experience": 11,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 888 9520",
+  "email": "sophie.dubois@sunrise.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

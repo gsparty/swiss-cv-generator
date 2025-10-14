@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Martin",
+  "age": 29,
+  "years_experience": 7,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 078 358 6669",
+  "email": "luc.martin40@sunrise.ch",
+  "title": "Junior Analyst",
+  "industry": "Finance"
+}

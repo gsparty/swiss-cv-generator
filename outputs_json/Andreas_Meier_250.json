@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Meier",
+  "age": 57,
+  "years_experience": 35,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 205 3299",
+  "email": "andreas.meier@bluewin.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

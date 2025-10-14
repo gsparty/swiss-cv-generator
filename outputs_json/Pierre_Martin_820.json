@@ -1,0 +1,14 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Martin",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 370 2006",
+  "email": "pierre.martin@sunrise.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

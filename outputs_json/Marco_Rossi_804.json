@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Rossi",
+  "age": 35,
+  "years_experience": 13,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 766 0190",
+  "email": "marco.rossi@bluewin.ch",
+  "title": "Lead Software Engineer",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Schneider",
+  "age": 43,
+  "years_experience": 21,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 558 4692",
+  "email": "claudia.schneider27@sunrise.ch",
+  "title": "Senior Software Engineer",
+  "industry": "Software"
+}

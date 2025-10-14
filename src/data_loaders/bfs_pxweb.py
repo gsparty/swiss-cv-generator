@@ -1,4 +1,4 @@
-import json
+﻿import json
 import requests
 from pathlib import Path
 from datetime import datetime
@@ -126,3 +126,4 @@ class BFSClient:
 
     def fetch(self, table: str, params: dict) -> dict:
         pass
+

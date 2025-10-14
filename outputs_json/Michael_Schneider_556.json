@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Schneider",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 910 2758",
+  "email": "michael.schneider@sunrise.ch",
+  "title": "Junior Junior Analyst",
+  "industry": "Finance"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Marie",
+  "last_name": "Bernard",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 108 4686",
+  "email": "marie.bernard@sunrise.ch",
+  "title": "Principal Software Engineer",
+  "industry": "Software"
+}

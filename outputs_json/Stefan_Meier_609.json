@@ -1,0 +1,14 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Meier",
+  "age": 35,
+  "years_experience": 13,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 195 0845",
+  "email": "stefan.meier@bluewin.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

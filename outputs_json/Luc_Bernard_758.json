@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Bernard",
+  "age": 36,
+  "years_experience": 14,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 620 1221",
+  "email": "luc.bernard2@sunrise.ch",
+  "title": "Senior Data Scientist",
+  "industry": "Software"
+}

@@ -1,4 +1,4 @@
-from typing import List, Optional, Literal
+﻿from typing import List, Optional, Literal
 from pydantic import BaseModel, Field, validator
 from datetime import date
 
@@ -82,3 +82,4 @@ class SwissPersona(BaseModel):
         if total > max(0, age - 15):
             raise ValueError('Total experience exceeds plausible bound for given age.')
         return v
+

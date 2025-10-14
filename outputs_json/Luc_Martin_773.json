@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Martin",
+  "age": 32,
+  "years_experience": 10,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 315 5647",
+  "email": "luc.martin@gmx.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

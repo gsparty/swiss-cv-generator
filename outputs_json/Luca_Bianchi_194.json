@@ -1,0 +1,14 @@
+{
+  "first_name": "Luca",
+  "last_name": "Bianchi",
+  "age": 23,
+  "years_experience": 1,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 657 5118",
+  "email": "luca.bianchi@sunrise.ch",
+  "title": "Junior Junior Analyst",
+  "industry": "Finance"
+}

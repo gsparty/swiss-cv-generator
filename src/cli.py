@@ -1,4 +1,4 @@
-import os
+﻿import os
 import random
 from pathlib import Path
 
@@ -64,3 +64,4 @@ def generate(count, output_dir, format, seed):
 
 if __name__ == "__main__":
     cli()
+

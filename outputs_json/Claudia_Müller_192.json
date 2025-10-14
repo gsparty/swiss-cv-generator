@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Müller",
+  "age": 39,
+  "years_experience": 17,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 989 9800",
+  "email": "claudia.mueller@bluewin.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

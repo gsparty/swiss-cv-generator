@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Martin",
+  "age": 42,
+  "years_experience": 20,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 077 914 8633",
+  "email": "luc.martin47@bluewin.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

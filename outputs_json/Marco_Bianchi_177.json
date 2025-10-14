@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Bianchi",
+  "age": 53,
+  "years_experience": 31,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 908 3865",
+  "email": "marco.bianchi@sunrise.ch",
+  "title": "Senior Senior Developer",
+  "industry": "Software"
+}

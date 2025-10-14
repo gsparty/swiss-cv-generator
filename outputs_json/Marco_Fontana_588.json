@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Fontana",
+  "age": 40,
+  "years_experience": 18,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 077 094 1109",
+  "email": "marco.fontana35@bluewin.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

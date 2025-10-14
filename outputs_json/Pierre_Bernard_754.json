@@ -1,0 +1,14 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Bernard",
+  "age": 24,
+  "years_experience": 2,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 076 170 6627",
+  "email": "pierre.bernard66@bluewin.ch",
+  "title": "Junior Junior Analyst",
+  "industry": "Finance"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Marco",
+  "last_name": "Bianchi",
+  "age": 44,
+  "years_experience": 22,
+  "gender": "unspecified",
+  "primary_language": "it",
+  "canton": "Ticino",
+  "city": "Lugano",
+  "phone": "+41 079 092 1748",
+  "email": "marco.bianchi@gmx.ch",
+  "title": "Lead Senior Developer",
+  "industry": "Software"
+}

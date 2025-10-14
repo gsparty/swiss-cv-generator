@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Müller",
+  "age": 54,
+  "years_experience": 32,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 076 710 9168",
+  "email": "sandra.mueller@sunrise.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}

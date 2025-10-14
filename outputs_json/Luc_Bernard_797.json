@@ -1,0 +1,14 @@
+{
+  "first_name": "Luc",
+  "last_name": "Bernard",
+  "age": 46,
+  "years_experience": 24,
+  "gender": "unspecified",
+  "primary_language": "fr",
+  "canton": "Genève",
+  "city": "Genève",
+  "phone": "+41 079 270 0938",
+  "email": "luc.bernard@sunrise.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

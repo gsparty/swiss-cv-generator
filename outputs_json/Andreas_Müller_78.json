@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 42,
+  "years_experience": 20,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 981 6902",
+  "email": "andreas.mueller70@gmx.ch",
+  "title": "Principal Junior Analyst",
+  "industry": "Finance"
+}

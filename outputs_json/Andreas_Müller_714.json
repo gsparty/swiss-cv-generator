@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 47,
+  "years_experience": 25,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 754 9711",
+  "email": "andreas.mueller@bluewin.ch",
+  "title": "Senior Junior Analyst",
+  "industry": "Finance"
+}

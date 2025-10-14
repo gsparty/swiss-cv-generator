@@ -1,0 +1,14 @@
+{
+  "first_name": "Andreas",
+  "last_name": "Müller",
+  "age": 50,
+  "years_experience": 28,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 645 2934",
+  "email": "andreas.mueller@gmx.ch",
+  "title": "Lead Senior Developer",
+  "industry": "Software"
+}

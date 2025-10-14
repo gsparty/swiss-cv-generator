@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Müller",
+  "age": 49,
+  "years_experience": 27,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 066 2576",
+  "email": "michael.mueller52@bluewin.ch",
+  "title": "Lead Senior Developer",
+  "industry": "Software"
+}

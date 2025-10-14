@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Schneider",
+  "age": 37,
+  "years_experience": 15,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 828 3645",
+  "email": "sandra.schneider62@sunrise.ch",
+  "title": "Lead Projektleiter",
+  "industry": "Engineering"
+}

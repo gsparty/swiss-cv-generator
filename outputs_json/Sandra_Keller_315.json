@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Keller",
+  "age": 35,
+  "years_experience": 13,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 079 769 3565",
+  "email": "sandra.keller@bluewin.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}

@@ -1,0 +1,14 @@
+{
+  "first_name": "Claudia",
+  "last_name": "Müller",
+  "age": 30,
+  "years_experience": 8,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 471 3390",
+  "email": "claudia.mueller53@gmx.ch",
+  "title": "Junior Analyst",
+  "industry": "Finance"
+}

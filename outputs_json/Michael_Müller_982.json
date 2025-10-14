@@ -1,0 +1,14 @@
+{
+  "first_name": "Michael",
+  "last_name": "Müller",
+  "age": 51,
+  "years_experience": 29,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 078 306 9063",
+  "email": "michael.mueller@bluewin.ch",
+  "title": "Principal Data Scientist",
+  "industry": "Software"
+}
