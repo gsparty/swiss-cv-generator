@@ -1,5 +1,22 @@
-﻿from .openai_compat import ChatCompletion as ChatCompletionCompat
-# Use compatibility shim via ChatCompletionCompat.create(...)
+﻿# src/openai_client.py
+"""
+Resilient OpenAI client with exponential backoff + local-template fallback.
+
+Usage:
+    from openai_client import client as openai_client
+    resp = openai_client.chat("Write a one-paragraph summary ...", max_tokens=200)
+    text = openai_client.generate_summary(persona_dict, language='de')
+"""
+
+import os
+import time
+import random
+import json
+from typing import Optional, Dict, Any, List
+
+# Try to import real openai package; wrapper will fall back safely if absent
+try:
+    import openai as _openai_pkg
     from openai.error import RateLimitError, ServiceUnavailableError, APIError, Timeout
 except Exception:
     _openai_pkg = None
@@ -155,5 +172,3 @@ class OpenAIClient:
 
 # Single shared client for easy import
 client = OpenAIClient()
-
-
