@@ -1,6 +1,7 @@
 ﻿[
-  {"occupation":"Software Engineer","industry":"Software"},
-  {"occupation":"Data Scientist","industry":"Software"},
-  {"occupation":"Project Manager","industry":"Engineering"},
-  {"occupation":"Analyst","industry":"Finance"}
+  {"title":"Software Engineer","industry":"Software"},
+  {"title":"Data Scientist","industry":"Software"},
+  {"title":"Projektleiter","industry":"Engineering"},
+  {"title":"Junior Analyst","industry":"Finance"},
+  {"title":"Senior Developer","industry":"Software"}
 ]
