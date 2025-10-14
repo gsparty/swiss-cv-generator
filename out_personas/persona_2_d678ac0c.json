@@ -1,0 +1,45 @@
+{
+  "id": "d678ac0c-1c08-4716-826e-8565169e488a",
+  "first_name": "Lukas",
+  "last_name": "Schneider",
+  "gender": "other",
+  "canton": "BE",
+  "language": "de",
+  "age": 37,
+  "birth_year": 1988,
+  "years_experience": 12,
+  "seniority": "lead",
+  "industry": "healthcare",
+  "current_title": "Data Analyst",
+  "email": "lukas.schneider@gmx.ch",
+  "phone": "+41792859198",
+  "address": null,
+  "skills": [
+    "communication",
+    "problem solving"
+  ],
+  "languages_spoken": [
+    "de"
+  ],
+  "education": [
+    {
+      "institution": "University",
+      "degree": "BSc",
+      "field": "Computer Science",
+      "start_year": 12,
+      "end_year": 15
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "ACME AG",
+      "canton": null,
+      "start_year": 2013,
+      "end_year": null,
+      "description": "Worked on projects and delivered value.",
+      "seniority": null
+    }
+  ],
+  "summary": "Lukas Schneider is a 12-year experienced professional in data."
+}

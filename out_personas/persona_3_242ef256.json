@@ -1,0 +1,45 @@
+{
+  "id": "242ef256-f816-4c16-97cc-f108ac5750bf",
+  "first_name": "Sophie",
+  "last_name": "Frey",
+  "gender": "female",
+  "canton": "AR",
+  "language": "de",
+  "age": 43,
+  "birth_year": 1982,
+  "years_experience": 19,
+  "seniority": "lead",
+  "industry": "technology",
+  "current_title": "Data Analyst",
+  "email": "sophie.frey@gmx.ch",
+  "phone": "+41784318229",
+  "address": null,
+  "skills": [
+    "communication",
+    "problem solving"
+  ],
+  "languages_spoken": [
+    "de"
+  ],
+  "education": [
+    {
+      "institution": "University",
+      "degree": "BSc",
+      "field": "Computer Science",
+      "start_year": 18,
+      "end_year": 21
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "ACME AG",
+      "canton": null,
+      "start_year": 2006,
+      "end_year": null,
+      "description": "Worked on projects and delivered value.",
+      "seniority": null
+    }
+  ],
+  "summary": "Sophie Frey is a 19-year experienced professional in software."
+}

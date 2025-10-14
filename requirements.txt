@@ -7,3 +7,13 @@ openai>=0.27
 pytest
 pydantic>=1.10,<2
 pytest
+
+# pydantic models + BFS loader
+pydantic
+requests
+pandas
+python-dotenv
+
+# CLI + schema validation
+typer
+jsonschema
