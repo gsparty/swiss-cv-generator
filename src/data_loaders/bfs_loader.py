@@ -1,4 +1,4 @@
-﻿import json
+import json
 import csv
 from pathlib import Path
 from typing import Dict

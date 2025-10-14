@@ -1,4 +1,4 @@
-﻿from pxwebpy.table import PxTable
+from pxwebpy.table import PxTable
 import sys
 
 def inspect_table(table_id: str, language: str = "en"):

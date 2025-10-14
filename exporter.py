@@ -1,4 +1,4 @@
-# swiss_cv_generator/exporter.py
+# swiss_cv/exporter.py
 import csv
 import json
 import shutil

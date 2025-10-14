@@ -1,4 +1,4 @@
-﻿import json
+import json
 import os
 from dataclasses import asdict, is_dataclass
 

@@ -1,4 +1,4 @@
-﻿import json
+import json
 import requests
 from pathlib import Path
 from datetime import datetime
@@ -120,3 +120,9 @@ def try_extract_1d_series(px_resp: Dict[str, Any], suspect_dimension_names=None)
         raise ValueError("PX response appears multi-dimensional; try manual inspection of saved JSON.")
 
     raise ValueError("PX response 'value' has unexpected type.")
+class BFSClient:
+    def __init__(self, base_url: str):
+        self.base_url = base_url
+
+    def fetch(self, table: str, params: dict) -> dict:
+        pass

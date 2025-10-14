@@ -1,4 +1,4 @@
-﻿import json
+import json
 
 
 def export_json(persona, filepath: str):

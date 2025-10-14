@@ -1,4 +1,4 @@
-﻿from src.swiss_cv.generators import generate_persona
+from src.swiss_cv.generators import generate_persona
 import json
 from types import SimpleNamespace
 

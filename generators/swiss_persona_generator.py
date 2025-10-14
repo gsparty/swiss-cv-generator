@@ -1,4 +1,4 @@
-﻿import random
+import random
 
 from data_loaders.swiss_data_loader import SwissDataLoader
 
@@ -25,7 +25,7 @@ class SwissPersonaGenerator:
         pl = canton.get("primary_language", "de")
         if pl == "de":
             first = random.choice(["Hans", "Julia"])
-            last = random.choice(["Müller", "Meier"])
+            last = random.choice(["M�ller", "Meier"])
         elif pl == "fr":
             first = random.choice(["Jean", "Marie"])
             last = random.choice(["Dubois", "Moreau"])

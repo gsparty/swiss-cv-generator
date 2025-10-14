@@ -1,4 +1,4 @@
-﻿import os
+import os
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 def render_html(persona, template_name="templates/cv_de.html"):

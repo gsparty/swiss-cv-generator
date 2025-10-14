@@ -1,4 +1,4 @@
-﻿from swiss_cv_generator.sampler import load_canton_populations, sample_cantons, smoke_test_sample
+from swiss_cv.sampler import load_canton_populations, sample_cantons, smoke_test_sample
 import json
 
 print("Loaded", len(load_canton_populations()), "cantons.")

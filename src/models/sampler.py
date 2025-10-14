@@ -1,4 +1,4 @@
-﻿import json
+import json
 import random
 from typing import Optional
 from src.data_loaders import bfs_loader

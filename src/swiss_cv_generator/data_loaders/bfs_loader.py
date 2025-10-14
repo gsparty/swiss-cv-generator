@@ -1,4 +1,4 @@
-﻿"""
+"""
 BFS / PxWeb loader using pxwebpy (more robust than raw requests).
 
 This loader:
@@ -9,7 +9,7 @@ This loader:
  - writes a CSV to out_csv
 
 Usage:
-    from swiss_cv_generator.data_loaders.bfs_loader import fetch_bfs_table_by_id
+    from swiss_cv.data_loaders.bfs_loader import fetch_bfs_table_by_id
     df = fetch_bfs_table_by_id("px-x-0102010000_101", "data/raw/canton_population.csv", language="en")
 
 Note: pxwebpy will request JSON-stat2 and parse metadata properly.
@@ -32,7 +32,7 @@ def _build_select_all_query(tbl: PxTable):
     # pxwebpy returns values as strings (labels). We'll pass them directly.
     query = {}
     for var, values in variables.items():
-        # Some variables include an entry like 'tabellinnehåll' that is not desirable; keep everything for full export
+        # Some variables include an entry like 'tabellinneh�ll' that is not desirable; keep everything for full export
         query[var] = values
     return query
 

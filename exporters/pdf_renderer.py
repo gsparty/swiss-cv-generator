@@ -1,4 +1,4 @@
-﻿import os
+import os
 
 def render_pdf_from_html_string(html_string, out_path):
     # Try WeasyPrint first (best visual fidelity)

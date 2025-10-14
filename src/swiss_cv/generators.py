@@ -1,4 +1,4 @@
-ï»¿import random
+import random
 from dataclasses import dataclass, is_dataclass, fields as dataclass_fields
 from typing import Any, Dict, Optional, List
 import inspect, types
@@ -40,7 +40,7 @@ def _generate_phone(rnd: random.Random) -> str:
 def _make_email(first: str, last: str, rnd: random.Random) -> str:
     domains = ["gmx.ch","bluewin.ch","sunrise.ch"]
     local = f"{first}.{last}".lower()
-    local = local.replace("Ã¼","ue").replace("Ã¶","oe").replace("Ã¤","ae")
+    local = local.replace("ü","ue").replace("ö","oe").replace("ä","ae")
     if rnd.random() < 0.25:
         local += str(rnd.randint(1,99))
     return f"{local}@{rnd.choice(domains)}"
@@ -74,7 +74,7 @@ def _instantiate_persona_class(clazz, persona_dict: Dict[str, Any]):
     except Exception:
         pass
 
-    # fallback â†’ wrap as dynamic object with attributes
+    # fallback ? wrap as dynamic object with attributes
     obj = types.SimpleNamespace(**persona_dict)
     return obj
 
@@ -125,7 +125,7 @@ def generate_persona(seed: Optional[int] = None, canton: Optional[Any] = None,
     years = max(0, age - 22)
 
     names = {
-        "de": {"first":["Andreas","Sandra","Michael","Claudia","Stefan"], "last":["MÃ¼ller","Meier","Keller","Schneider"]},
+        "de": {"first":["Andreas","Sandra","Michael","Claudia","Stefan"], "last":["Müller","Meier","Keller","Schneider"]},
         "fr": {"first":["Pierre","Marie","Luc","Sophie"], "last":["Martin","Dubois","Bernard"]},
         "it": {"first":["Marco","Maria","Luca","Giulia"], "last":["Rossi","Bianchi","Fontana"]}
     }
@@ -161,7 +161,7 @@ def generate_persona(seed: Optional[int] = None, canton: Optional[Any] = None,
 def to_builtin(o):
     """
     Recursively convert SimpleNamespace/dict/list into builtin types for JSON serialization.
-    Safe helper â€” does not mutate the originals.
+    Safe helper — does not mutate the originals.
     """
     from types import SimpleNamespace
     if isinstance(o, SimpleNamespace):

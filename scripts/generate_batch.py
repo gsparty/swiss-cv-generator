@@ -1,4 +1,4 @@
-﻿import sys, os, json, traceback, csv
+import sys, os, json, traceback, csv
 from types import SimpleNamespace
 
 # Try to import project generators/exporters

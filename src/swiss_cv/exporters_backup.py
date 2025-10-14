@@ -1,4 +1,4 @@
-﻿# src/swiss_cv/exporters.py
+# src/swiss_cv/exporters.py
 from __future__ import annotations
 
 import json

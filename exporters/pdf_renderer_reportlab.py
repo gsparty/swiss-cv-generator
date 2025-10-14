@@ -1,4 +1,4 @@
-﻿from reportlab.lib.pagesizes import A4
+from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 
 def render_pdf_from_html_string(html_string, out_path):

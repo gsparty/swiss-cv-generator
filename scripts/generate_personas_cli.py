@@ -1,7 +1,7 @@
-﻿import typer
+import typer
 from typing import Optional
 import os
-from swiss_cv_generator.generator import generate
+from swiss_cv.generator import generate
 
 app = typer.Typer(help="Swiss CV Generator CLI (dev)")
 

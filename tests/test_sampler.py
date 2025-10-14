@@ -1,4 +1,4 @@
-﻿from src.models.sampler import sample_canton
+from src.models.sampler import sample_canton
 import json
 import pytest
 
