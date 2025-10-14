@@ -1,0 +1,73 @@
+﻿import sys, os, json, traceback
+from types import SimpleNamespace
+
+try:
+    from src.swiss_cv import generators, exporters
+except Exception:
+    generators = __import__("src.swiss_cv.generators", fromlist=["*"])
+    try:
+        from src.swiss_cv import exporters
+    except Exception:
+        exporters = None
+
+def to_builtin(o):
+    if isinstance(o, SimpleNamespace):
+        return {k: to_builtin(v) for k, v in vars(o).items()}
+    if isinstance(o, dict):
+        return {k: to_builtin(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [to_builtin(i) for i in o]
+    return o
+
+def save_persona(persona_obj, index):
+    persona = persona_obj if isinstance(persona_obj, dict) else to_builtin(persona_obj)
+    last = persona.get('last_name', f'unknown_{index}')
+    base = os.path.join('out', f"{index}_{last}")
+    os.makedirs('out', exist_ok=True)
+
+    # JSON
+    json_path = f"{base}.json"
+    try:
+        if exporters and hasattr(exporters, "export_json"):
+            exporters.export_json(persona, json_path)
+        else:
+            with open(json_path, "w", encoding="utf-8") as fh:
+                json.dump({'schema_version':'1.0','persona': persona}, fh, ensure_ascii=False, indent=2)
+    except Exception:
+        traceback.print_exc()
+
+    # HTML
+    html_path = f"{base}.html"
+    html = "<!doctype html><html><head><meta charset=\"utf-8\"><title>Persona</title></head><body>"
+    html += "<pre>" + json.dumps(persona, ensure_ascii=False, indent=2) + "</pre></body></html>"
+    with open(html_path, "w", encoding="utf-8") as fh:
+        fh.write(html)
+
+    # PDF
+    pdf_path = f"{base}.pdf"
+    try:
+        if exporters and hasattr(exporters, "export_pdf"):
+            exporters.export_pdf(html, pdf_path)
+    except Exception:
+        traceback.print_exc()
+
+    return json_path, html_path, pdf_path
+
+def main():
+    n = 3
+    if len(sys.argv) > 1:
+        try:
+            n = int(sys.argv[1])
+        except Exception:
+            pass
+    for i in range(1, n+1):
+        try:
+            gen = getattr(generators, "generate_persona_jsonable", None) or getattr(generators, "generate_persona")
+            p = gen()
+            j,h,pdf = save_persona(p, i)
+            print(f"Generated: {j}, {h}, {pdf}")
+        except Exception:
+            traceback.print_exc()
+
+if __name__ == '__main__':
+    main()

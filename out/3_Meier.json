@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "persona": {
+    "first_name": "Andreas",
+    "last_name": "Meier",
+    "age": 43,
+    "years_experience": 21,
+    "gender": "unspecified",
+    "primary_language": "de",
+    "canton": "Zürich",
+    "city": "Zürich",
+    "phone": "+41 078 067 5772",
+    "email": "andreas.meier90@gmx.ch",
+    "title": "Senior Senior Developer",
+    "industry": "Software"
+  }
+}

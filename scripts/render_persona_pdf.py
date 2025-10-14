@@ -1,63 +1,87 @@
 ﻿import json, os, sys, traceback
+from types import SimpleNamespace
 
+# Import project modules
 try:
     from src.swiss_cv import generators, exporters
 except Exception:
-    # If exporters missing, still proceed to dump persona
     generators = __import__("src.swiss_cv.generators", fromlist=["*"])
-    exporters = None
+    # try to import exporters module; if not found, set to None
+    try:
+        from src.swiss_cv import exporters
+    except Exception:
+        exporters = None
 
-def _get_persona():
-    # prefer JSON-ready wrapper if present
+def to_builtin(o):
+    """Recursively convert SimpleNamespace/dict/list into builtin types for JSON serialization."""
+    if isinstance(o, SimpleNamespace):
+        return {k: to_builtin(v) for k, v in vars(o).items()}
+    if isinstance(o, dict):
+        return {k: to_builtin(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [to_builtin(i) for i in o]
+    return o
+
+def get_persona():
     gen = getattr(generators, "generate_persona_jsonable", None) or getattr(generators, "generate_persona")
     return gen()
 
 def main():
     try:
-        persona = _get_persona()
+        persona = get_persona()
     except Exception:
         traceback.print_exc()
         sys.exit(2)
 
-    # Persona should already be builtins if generate_persona_jsonable exists; if not, convert safely
-    def to_builtin(o):
-        from types import SimpleNamespace
-        if isinstance(o, SimpleNamespace):
-            return {k: to_builtin(v) for k, v in vars(o).items()}
-        if isinstance(o, dict):
-            return {k: to_builtin(v) for k, v in o.items()}
-        if isinstance(o, list):
-            return [to_builtin(i) for i in o]
-        return o
-
+    # Make sure persona is JSON-serializable builtins
     if not isinstance(persona, (dict, list)):
-        persona = to_builtin(persona)
+        persona_b = to_builtin(persona)
+    else:
+        persona_b = persona
 
     os.makedirs("out", exist_ok=True)
-    html_path = os.path.join("out", "persona_preview.html")
-    with open(html_path, "w", encoding="utf-8") as f:
-        f.write("<!doctype html><html><head><meta charset=\"utf-8\"><title>Persona Preview</title></head><body>")
-        f.write("<h1>Persona Preview</h1><pre>")
-        f.write(json.dumps(persona, ensure_ascii=False, indent=2))
-        f.write("</pre></body></html>")
+
+    # Write JSON using exporters.export_json if available, else raw dump
+    json_name = f"persona_{persona_b.get('last_name','unknown')}.json"
+    json_path = os.path.join("out", json_name)
+    try:
+        if exporters and hasattr(exporters, "export_json"):
+            exporters.export_json(persona_b, json_path)
+            print("Wrote JSON via exporters.export_json:", json_path)
+        else:
+            with open(json_path, "w", encoding="utf-8") as fh:
+                json.dump({"schema_version":"1.0","persona": persona_b}, fh, ensure_ascii=False, indent=2)
+            print("Wrote JSON:", json_path)
+    except Exception:
+        print("Failed to write JSON, falling back to raw dump.")
+        traceback.print_exc()
+
+    # Create a basic HTML preview
+    html_name = f"persona_{persona_b.get('last_name','unknown')}.html"
+    html_path = os.path.join("out", html_name)
+    html_string = "<!doctype html><html><head><meta charset=\"utf-8\"><title>Persona Preview</title></head><body>"
+    html_string += "<h1>Persona Preview</h1><pre>"
+    html_string += json.dumps(persona_b, ensure_ascii=False, indent=2)
+    html_string += "</pre></body></html>"
+    with open(html_path, "w", encoding="utf-8") as fh:
+        fh.write(html_string)
     print("Wrote HTML preview:", html_path)
 
-    # Try to call exporters to make PDF if possible
-    if exporters:
-        render_fn = getattr(exporters, "render_pdf_from_html_string", None) or getattr(exporters, "render_pdf", None)
-        if render_fn:
-            out_pdf = os.path.join("out", f"persona_{persona.get('last_name','unknown')}_preview.pdf")
-            try:
-                ok = render_fn(open(html_path, "r", encoding="utf-8").read(), out_pdf) if render_fn.__code__.co_argcount >= 2 else render_fn(html_path, out_pdf)
-                # render_fn might return True/False or None — just report
-                print("Attempted PDF render. Output path:", out_pdf)
-            except Exception:
-                print("PDF rendering failed; see traceback below.")
-                traceback.print_exc()
+    # Try to render PDF using exporters.export_pdf(html_string, out_path)
+    pdf_name = f"persona_{persona_b.get('last_name','unknown')}.pdf"
+    pdf_path = os.path.join("out", pdf_name)
+    try:
+        if exporters and hasattr(exporters, "export_pdf"):
+            ok = exporters.export_pdf(html_string, pdf_path)
+            if ok:
+                print("PDF created:", pdf_path)
+            else:
+                print("exporters.export_pdf returned False — saved fallback HTML instead of PDF.")
         else:
-            print("No known PDF render function found in exporters. Skipping PDF step.")
-    else:
-        print("No exporters module available. You can use out/persona_preview.html to manually generate PDF.")
-    
+            print("No exporters.export_pdf available — kept HTML at", html_path)
+    except Exception:
+        print("PDF rendering failed; traceback:")
+        traceback.print_exc()
+
 if __name__ == '__main__':
     main()

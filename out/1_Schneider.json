@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "persona": {
+    "first_name": "Stefan",
+    "last_name": "Schneider",
+    "age": 33,
+    "years_experience": 11,
+    "gender": "unspecified",
+    "primary_language": "de",
+    "canton": "Zürich",
+    "city": "Zürich",
+    "phone": "+41 077 566 3614",
+    "email": "stefan.schneider@gmx.ch",
+    "title": "Senior Data Scientist",
+    "industry": "Software"
+  }
+}

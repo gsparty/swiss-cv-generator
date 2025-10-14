@@ -1,0 +1,14 @@
+{
+  "first_name": "Sandra",
+  "last_name": "Keller",
+  "age": 25,
+  "years_experience": 3,
+  "gender": "unspecified",
+  "primary_language": "de",
+  "canton": "Zürich",
+  "city": "Zürich",
+  "phone": "+41 077 710 5254",
+  "email": "sandra.keller@sunrise.ch",
+  "title": "Junior Junior Analyst",
+  "industry": "Finance"
+}

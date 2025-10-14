@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "persona": {
+    "first_name": "Sandra",
+    "last_name": "Müller",
+    "age": 54,
+    "years_experience": 32,
+    "gender": "unspecified",
+    "primary_language": "de",
+    "canton": "Zürich",
+    "city": "Zürich",
+    "phone": "+41 076 161 5569",
+    "email": "sandra.mueller@gmx.ch",
+    "title": "Principal Junior Analyst",
+    "industry": "Finance"
+  }
+}
