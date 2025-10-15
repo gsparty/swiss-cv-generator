@@ -1,0 +1,16 @@
+{
+  "first_name": "Lukas",
+  "last_name": "Rossi",
+  "full_name": "Lukas Rossi",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1978,
+  "age": 47,
+  "experience_years": 23,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "lukas.rossi@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

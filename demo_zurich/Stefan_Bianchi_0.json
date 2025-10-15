@@ -1,0 +1,16 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Bianchi",
+  "full_name": "Stefan Bianchi",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1987,
+  "age": 38,
+  "experience_years": 16,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "stefan.bianchi@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

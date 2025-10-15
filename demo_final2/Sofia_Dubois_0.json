@@ -1,0 +1,16 @@
+{
+  "first_name": "Sofia",
+  "last_name": "Dubois",
+  "full_name": "Sofia Dubois",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1999,
+  "age": 26,
+  "experience_years": 2,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "sofia.dubois@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

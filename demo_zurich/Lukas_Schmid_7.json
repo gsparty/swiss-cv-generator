@@ -1,0 +1,16 @@
+{
+  "first_name": "Lukas",
+  "last_name": "Schmid",
+  "full_name": "Lukas Schmid",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1976,
+  "age": 49,
+  "experience_years": 26,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "lukas.schmid@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

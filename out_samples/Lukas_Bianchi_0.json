@@ -1,0 +1,16 @@
+{
+  "first_name": "Lukas",
+  "last_name": "Bianchi",
+  "full_name": "Lukas Bianchi",
+  "canton": null,
+  "city": null,
+  "language": "de",
+  "birth_year": 1988,
+  "age": 37,
+  "experience_years": 15,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "lukas.bianchi@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

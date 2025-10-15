@@ -1,0 +1,16 @@
+{
+  "first_name": "Pierre",
+  "last_name": "Müller",
+  "full_name": "Pierre Müller",
+  "canton": "VD",
+  "city": "Vaud",
+  "language": "fr",
+  "birth_year": 1979,
+  "age": 46,
+  "experience_years": 20,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "pierre.müller@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

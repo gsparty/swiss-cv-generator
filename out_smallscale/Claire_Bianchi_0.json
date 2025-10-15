@@ -1,0 +1,16 @@
+{
+  "first_name": "Claire",
+  "last_name": "Bianchi",
+  "full_name": "Claire Bianchi",
+  "canton": "VD",
+  "city": "Vaud",
+  "language": "fr",
+  "birth_year": 1986,
+  "age": 39,
+  "experience_years": 13,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "claire.bianchi@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

@@ -1,0 +1,16 @@
+{
+  "first_name": "Anna",
+  "last_name": "Dubois",
+  "full_name": "Anna Dubois",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1997,
+  "age": 28,
+  "experience_years": 6,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "anna.dubois@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}
