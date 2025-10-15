@@ -1,1 +1,1 @@
-﻿{first_name} {last_name} è un/una {title} con {years_experience} anni di esperienza nel settore {industry}. Esperto/a in gestione progetti, lavoro interdisciplinare e approccio pragmatico alle soluzioni. Residente nel Cantone {canton}.
+﻿{age} anni, residente a {canton}. {experience_years} anni di esperienza come {occupation}. Profilo: professionista esperto, orientato ai progetti e al lavoro di squadra.

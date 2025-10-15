@@ -1,1 +1,1 @@
-﻿{first_name} {last_name} ist ein erfahrener {title} mit {years_experience} Jahren Erfahrung im Bereich {industry}. Kompetent in fachlicher Führung, Projektarbeit und interdisziplinärer Zusammenarbeit; zeichnet sich durch Struktur, Zuverlässigkeit und eine lösungsorientierte Arbeitsweise aus. Wohnhaft im Kanton {canton}.
+﻿{age} Jahre alt, wohnhaft in {canton}. {experience_years} Jahre Berufserfahrung als {occupation}. Kurzprofil: Erfahrene:r Fachkraft mit Fokus auf Projektarbeit und Teamarbeit.

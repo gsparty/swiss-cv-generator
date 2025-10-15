@@ -1,0 +1,29 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Keller",
+  "age": 51,
+  "canton": "ZH",
+  "language": "de",
+  "email": "stefan.keller@bluewin.ch",
+  "phone": "+41 079 422 0133",
+  "summary": "Experienced technology based in ZH, 51 years old, with 27 years in the field.",
+  "experiences": [
+    {
+      "title": "Technology Specialist",
+      "company": "Technology Solutions AG",
+      "start_year": 2000,
+      "end_year": null,
+      "description": "27 years experience in technology"
+    }
+  ],
+  "skills": [
+    "Communication",
+    "Problem solving",
+    "technology"
+  ],
+  "bullets": [
+    "27 years experience in technology",
+    "Team collaboration & project delivery",
+    "Problem-solving and communication"
+  ]
+}

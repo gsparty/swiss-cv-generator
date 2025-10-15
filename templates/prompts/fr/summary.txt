@@ -1,1 +1,1 @@
-﻿{first_name} {last_name} est un·e {title} avec {years_experience} ans d'expérience dans le domaine {industry}. Compétent·e en gestion de projet, travail d'équipe et livraison rigoureuse de solutions — orienté·e résultats. Basé·e dans le canton {canton}.
+﻿{age} ans, domicilié à {canton}. {experience_years} ans d''expérience en tant que {occupation}. Profil: professionnel expérimenté, orienté vers les projets et le travail en équipe.
