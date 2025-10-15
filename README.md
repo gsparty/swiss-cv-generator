@@ -99,4 +99,3 @@ The script auto-detects Ghostscript if available and creates
 ---
 
 **Author:** gsparty  
-**License:** MIT
