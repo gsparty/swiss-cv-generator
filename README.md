@@ -43,7 +43,7 @@ demo_out/
 | --count | Number of CVs to generate |
 | --outdir | Output directory |
 | --canton | Force canton code (e.g. ZH, VD, TI) |
-| --pdf-engine | uto, playwright, or weasyprint |
+| --pdf-engine | Beluto, playwright, or weasyprint |
 | --pdf-scale | Scale factor for rendering (e.g. 0.92 for slightly smaller text) |
 | --one-page | Try to force one-page CVs (truncates long summaries, shrinks scale) |
 | --summary-max-chars | Maximum character length of the profile summary |
