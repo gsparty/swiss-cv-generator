@@ -1,0 +1,16 @@
+{
+  "first_name": "Sofia",
+  "last_name": "Schmid",
+  "full_name": "Sofia Schmid",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1970,
+  "age": 55,
+  "experience_years": 33,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "sofia.schmid@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

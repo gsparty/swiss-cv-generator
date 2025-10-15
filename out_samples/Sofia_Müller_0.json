@@ -1,0 +1,16 @@
+{
+  "first_name": "Sofia",
+  "last_name": "Müller",
+  "full_name": "Sofia Müller",
+  "canton": "BE",
+  "city": "Bern",
+  "language": "de",
+  "birth_year": 1998,
+  "age": 27,
+  "experience_years": 5,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "sofia.müller@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

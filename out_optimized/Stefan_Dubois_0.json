@@ -1,0 +1,16 @@
+{
+  "first_name": "Stefan",
+  "last_name": "Dubois",
+  "full_name": "Stefan Dubois",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1974,
+  "age": 51,
+  "experience_years": 26,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "stefan.dubois@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

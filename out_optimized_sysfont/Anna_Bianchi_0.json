@@ -1,0 +1,16 @@
+{
+  "first_name": "Anna",
+  "last_name": "Bianchi",
+  "full_name": "Anna Bianchi",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1971,
+  "age": 54,
+  "experience_years": 30,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "anna.bianchi@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

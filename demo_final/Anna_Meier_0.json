@@ -1,0 +1,16 @@
+{
+  "first_name": "Anna",
+  "last_name": "Meier",
+  "full_name": "Anna Meier",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1972,
+  "age": 53,
+  "experience_years": 31,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "anna.meier@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

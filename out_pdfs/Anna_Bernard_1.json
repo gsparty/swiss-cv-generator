@@ -1,0 +1,16 @@
+{
+  "first_name": "Anna",
+  "last_name": "Bernard",
+  "full_name": "Anna Bernard",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1973,
+  "age": 52,
+  "experience_years": 28,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "anna.bernard@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

@@ -1,0 +1,16 @@
+{
+  "first_name": "Sofia",
+  "last_name": "Meier",
+  "full_name": "Sofia Meier",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1997,
+  "age": 28,
+  "experience_years": 3,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "sofia.meier@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}

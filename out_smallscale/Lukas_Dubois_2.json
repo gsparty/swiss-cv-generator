@@ -1,0 +1,16 @@
+{
+  "first_name": "Lukas",
+  "last_name": "Dubois",
+  "full_name": "Lukas Dubois",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1995,
+  "age": 30,
+  "experience_years": 7,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "lukas.dubois@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}
