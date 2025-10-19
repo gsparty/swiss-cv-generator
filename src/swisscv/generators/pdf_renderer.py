@@ -78,3 +78,5 @@ def render_pdf_from_template(template_path: str, context: dict, out_path: str):
     fallback = Path(out_path).with_suffix(".html")
     fallback.write_text(Path(html_file).read_text(encoding="utf8"), encoding="utf8")
     return str(fallback)
+
+

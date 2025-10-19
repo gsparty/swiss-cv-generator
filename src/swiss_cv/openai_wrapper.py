@@ -77,3 +77,5 @@ class OpenAIWrapper:
 
 # single instance
 client = OpenAIWrapper()
+
+

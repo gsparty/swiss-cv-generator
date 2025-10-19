@@ -41,3 +41,5 @@ class ChatCompletion:
         if isinstance(text, dict) and 'content' in text:
             text = text['content']
         return _format_response(str(text))
+
+

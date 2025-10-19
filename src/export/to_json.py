@@ -10,3 +10,5 @@ def persona_to_json(persona: SwissPersona) -> str:
 def save_persona_json(persona: SwissPersona, path: str):
     with open(path, 'w', encoding='utf-8') as fh:
         fh.write(persona_to_json(persona))
+
+

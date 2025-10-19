@@ -17,7 +17,7 @@ def render_cv_pdf(persona: SwissPersona, path: str):
 
     # Header
     elems.append(Paragraph(persona.full_name, title_style))
-    contact = f\"{persona.canton} • {persona.language.value} • {persona.age} Jahre<br/>{persona.email} • {persona.phone}\"
+    contact = f"{persona.canton} • {persona.language.value} • {persona.age} Jahre<br/>{persona.email} • {persona.phone}"
     elems.append(Paragraph(contact, normal))
     elems.append(Spacer(1,8))
 
@@ -35,7 +35,7 @@ def render_cv_pdf(persona: SwissPersona, path: str):
         title = h.get('title','')
         comp = h.get('company','')
         desc = h.get('desc','')
-        data.append([f\"{start} – {end}\", title, comp, desc])
+        data.append([f"{start} – {end}", title, comp, desc])
     tbl = Table(data, colWidths=[60*mm, 40*mm, 50*mm, None])
     tbl.setStyle(TableStyle([
         ('GRID',(0,0),(-1,-1),0.25,colors.grey),
@@ -53,3 +53,5 @@ def render_cv_pdf(persona: SwissPersona, path: str):
     elems.append(Paragraph(persona.language.value, normal))
 
     doc.build(elems)
+
+

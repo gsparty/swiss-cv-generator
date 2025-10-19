@@ -44,3 +44,5 @@ class SwissPersona(BaseModel):
     skills: List[str]
     summary: Optional[str] = None
     photo_path: Optional[str] = None
+
+

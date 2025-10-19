@@ -104,3 +104,5 @@ if __name__ == '__main__':
         f.write(schema_json)
     print(f"Wrote SwissPersona JSON schema to {out_path}")
 
+
+

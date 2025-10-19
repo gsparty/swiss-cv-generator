@@ -51,7 +51,7 @@ def try_extract_1d_series(px_resp: Dict[str, Any], suspect_dimension_names=None)
     Returns a mapping label -> numeric value when possible, otherwise raises ValueError.
     """
     if suspect_dimension_names is None:
-        suspect_dimension_names = ["canton","kanton","geo","geography","region","geog","geo", "GEOGRAF", "GE"]
+        suspect_dimension_names = ["canton","kanton","geo","geography","region","geog","geo", "GEOGRAf", "GE"]
 
     dims = px_resp.get("dimension", {})
     values = px_resp.get("value")
@@ -126,4 +126,6 @@ class BFSClient:
 
     def fetch(self, table: str, params: dict) -> dict:
         pass
+
+
 

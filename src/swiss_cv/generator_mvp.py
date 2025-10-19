@@ -140,3 +140,5 @@ def generate_persona(occupation: str = 'technology') -> SwissPersona:
     object.__setattr__(persona, 'bullets', persona_raw['bullets'])
 
     return persona
+
+

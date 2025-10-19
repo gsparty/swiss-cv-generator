@@ -30,7 +30,7 @@ def generate(count, canton, industry, language, out_format, output_dir, verbose)
             # Optionally force language
             if language:
                 persona.language = language
-            base = f\"{persona.full_name.replace(' ','_')}_{persona.canton}_{i}\"
+            base = f"{persona.full_name.replace(' ','_')}_{persona.canton}_{i}"
             if out_format in ('json','both'):
                 json_path = os.path.join(output_dir, base + '.json')
                 save_persona_json(persona, json_path)
@@ -42,3 +42,5 @@ def generate(count, canton, industry, language, out_format, output_dir, verbose)
 
 if __name__ == '__main__':
     cli()
+
+
