@@ -6,3 +6,5 @@ except Exception:
     ChatCompletionCompat = None
 
 ChatCompletion = ChatCompletionCompat
+
+

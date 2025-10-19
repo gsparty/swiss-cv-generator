@@ -25,3 +25,5 @@ class SwissPersona(BaseModel):
         if v < 16 or v > 80:
             raise ValueError('age out of realistic range')
         return v
+
+

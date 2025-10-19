@@ -19,3 +19,5 @@ def call_openai(prompt: str, model: str = "gpt-4o-mini"):
         return resp.choices[0].message.get("content","").strip() or fallback
     except Exception:
         return fallback
+
+

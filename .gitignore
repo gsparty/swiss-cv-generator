@@ -224,3 +224,14 @@ outputs/
 .vscode/
 .Python
 >>>>>>> 6671c1d (Initial scaffold: data, persona, generator, exporters, CLI)
+# outputs
+demo_out/
+out*/
+outputs*/
+# venv
+.venv/
+# backups & logs
+*backup*
+*.bak
+*.log
+recovery_log.txt

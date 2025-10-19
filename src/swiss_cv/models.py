@@ -39,3 +39,5 @@ class SwissPersona(BaseModel):
     industry: Optional[str]
     summary: Optional[str]
     career_history: Optional[List[CareerEntry]] = []
+
+

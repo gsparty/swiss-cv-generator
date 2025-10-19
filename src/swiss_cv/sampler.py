@@ -57,3 +57,5 @@ def sample_email(first: str, last: str, canton: str):
     domains = ['example.ch','bluewin.ch','gmx.ch','gmail.com']
     safe = f"{first.lower().replace(' ','')}.{last.lower().replace(' ','')}"
     return f"{safe}@{random.choice(domains)}"
+
+

@@ -111,3 +111,5 @@ def sample_persona_seeded(seed: int = None, canton_code: str = None):
         phone="0791234567"
     )
     return persona
+
+

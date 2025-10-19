@@ -23,3 +23,5 @@ def sample_canton(processed_json_path: str = 'data/processed/pop_by_canton.json'
             return c
     return cantons[-1]
 
+
+

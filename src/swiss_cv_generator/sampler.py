@@ -152,3 +152,5 @@ if __name__ == "__main__":
         print(f"  {k}: {v:,}")
     print("Sampling 10 cantons (seed=42):", sample_cantons(10, seed=42))
 
+
+

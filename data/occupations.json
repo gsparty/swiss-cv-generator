@@ -1,7 +1,6 @@
-﻿[
-  {"title":"Software Engineer","industry":"Tech","seniority":"mid"},
-  {"title":"Data Scientist","industry":"Tech","seniority":"mid"},
-  {"title":"Marketing Manager","industry":"Marketing","seniority":"senior"},
-  {"title":"Accountant","industry":"Finance","seniority":"junior"},
-  {"title":"Civil Engineer","industry":"Engineering","seniority":"mid"}
-]
+﻿{
+  ""occupations"": [
+    { ""code"": ""sw_eng"", ""title"": {""de"": ""Software Engineer"",""fr"": ""Ingénieur logiciel"",""it"": ""Ingegnere del software""}, ""industry"": ""technology"" },
+    { ""code"": ""analyst"", ""title"": {""de"": ""Business Analyst"",""fr"": ""Analyste d'entreprise"",""it"": ""Analista""}, ""industry"": ""finance"" }
+  ]
+}
