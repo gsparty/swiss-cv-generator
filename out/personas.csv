@@ -1,6 +1,0 @@
-index,first_name,last_name,age,years_experience,primary_language,canton,city,phone,email,title,industry,json_path,html_path,pdf_path
-1,Stefan,Schneider,33,11,de,Zürich,Zürich,+41 077 566 3614,stefan.schneider@gmx.ch,Senior Data Scientist,Software,out\1_Schneider.json,out\1_Schneider.html,out\1_Schneider.pdf
-2,Sandra,Müller,54,32,de,Zürich,Zürich,+41 076 161 5569,sandra.mueller@gmx.ch,Principal Junior Analyst,Finance,out\2_Müller.json,out\2_Müller.html,out\2_Müller.pdf
-3,Andreas,Meier,43,21,de,Zürich,Zürich,+41 078 067 5772,andreas.meier90@gmx.ch,Senior Senior Developer,Software,out\3_Meier.json,out\3_Meier.html,out\3_Meier.pdf
-4,Claudia,Keller,50,28,de,Zürich,Zürich,+41 078 962 5487,claudia.keller@sunrise.ch,Senior Junior Analyst,Finance,out\4_Keller.json,out\4_Keller.html,out\4_Keller.pdf
-5,Michael,Müller,54,32,de,Zürich,Zürich,+41 077 546 6096,michael.mueller@gmx.ch,Senior Software Engineer,Software,out\5_Müller.json,out\5_Müller.html,out\5_Müller.pdf

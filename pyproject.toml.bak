@@ -1,9 +1,0 @@
-﻿[project]
-name = "swisscv"
-version = "0.0.0"
-description = "Swiss CV Generator (local dev editable install)"
-readme = "README.md"
-
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"

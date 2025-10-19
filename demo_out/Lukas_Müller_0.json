@@ -1,0 +1,16 @@
+{
+  "first_name": "Lukas",
+  "last_name": "Müller",
+  "full_name": "Lukas Müller",
+  "canton": "ZH",
+  "city": "Zürich",
+  "language": "de",
+  "birth_year": 1979,
+  "age": 46,
+  "experience_years": 24,
+  "current_role": "Software Engineer",
+  "industry": "technology",
+  "email": "lukas.müller@example.ch",
+  "phone": "0791234567",
+  "summary": "Erfahrener Profi mit relevanter Erfahrung und starken technischen Fähigkeiten."
+}
