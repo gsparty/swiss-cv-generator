@@ -1,0 +1,13 @@
+﻿2025-10-19 21:57:19 	 === Recovery/cleanup run started ===
+2025-10-19 21:57:19 	 Checked importlib + python executable: IMPORTLIB_FILE:C:\Users\danie\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py PY_EXE:C:\Projects\swiss-cv-generator\.venv\Scripts\python.exe
+2025-10-19 21:57:20 	 pip version: pip 25.2 from C:\Projects\swiss-cv-generator\.venv\Lib\site-packages\pip (python 3.13) 
+2025-10-19 21:57:21 	 pip list filtered: playwright                1.55.0
+swisscv                   0.0.0       C:\Projects\swiss-cv-generator
+
+2025-10-19 21:57:21 	 Listed demo_out contents.
+2025-10-19 21:57:21 	 Pip metadata dir: C:\Projects\swiss-cv-generator\.venv\Lib\site-packages\pip\_internal\metadata
+2025-10-19 21:57:21 	 Found importlib-related items: C:\Projects\swiss-cv-generator\.venv\Lib\site-packages\pip\_internal\metadata\importlib
+
+2025-10-19 21:57:26 	 Removing temporary clone: C:\tmp\swiss-cv-generator-clean
+2025-10-19 21:57:26 	 Removed temp clone.
+2025-10-19 21:57:26 	 === Recovery/cleanup run finished ===
