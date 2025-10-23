@@ -17,7 +17,7 @@ def render_cv_pdf(persona: SwissPersona, path: str):
 
     # Header
     elems.append(Paragraph(persona.full_name, title_style))
-    contact = f"{persona.canton} • {persona.language.value} • {persona.age} Jahre<br/>{persona.email} • {persona.phone}"
+    contact = f"{persona.canton} • {persona.language} • {persona.age} Jahre<br/>{persona.email} • {persona.phone}"
     elems.append(Paragraph(contact, normal))
     elems.append(Spacer(1,8))
 
@@ -50,7 +50,7 @@ def render_cv_pdf(persona: SwissPersona, path: str):
     elems.append(Paragraph(', '.join(persona.skills), normal))
     elems.append(Spacer(1,6))
     elems.append(Paragraph('<b>Sprachen / Languages</b>', styles['Heading2']))
-    elems.append(Paragraph(persona.language.value, normal))
+    elems.append(Paragraph(persona.language, normal))
 
     doc.build(elems)
 

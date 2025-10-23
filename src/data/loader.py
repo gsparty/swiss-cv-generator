@@ -1,75 +1,109 @@
-﻿import csv
+﻿"""Data loading utilities for Swiss CV Generator"""
+
 import json
-from typing import List, Dict, Optional
-from .models import CantonInfo, OccupationCategory, CompanyInfo
-import pathlib
+import csv
+import os
+from typing import List, Dict, Any
 
-def _normalize_dictreader_row(row: Dict[str, str]) -> Dict[str, str]:
-    """Return a dict with keys normalized (strip BOM and whitespace)."""
-    new: Dict[str, str] = {}
-    for k, v in row.items():
-        if k is None:
-            continue
-        nk = k.lstrip('\ufeff').strip()
-        new[nk] = v
-    return new
 
-def _safe_int(val: Optional[str], default: Optional[int] = None) -> Optional[int]:
-    if val is None:
-        return default
-    if isinstance(val, int):
-        return val
-    s = str(val).strip()
-    if s == "":
-        return default
-    # remove thousand separators commonly used (commas / spaces)
-    s = s.replace(" ", "").replace(",", "")
-    return int(s) if s.isdigit() else default
+def load_cantons_json(path: str = 'data/cantons.json') -> List[Dict]:
+    """Load cantons from JSON file"""
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Cantons data not found at {path}")
+    
+    with open(path, 'r', encoding='utf-8-sig') as f:
+        data = json.load(f)
+    
+    # Handle both list and dict formats
+    if isinstance(data, dict):
+        return list(data.values())
+    return data
 
-def load_cantons_csv(path: str) -> List[CantonInfo]:
-    cants: List[CantonInfo] = []
-    with open(path, newline='', encoding='utf-8') as fh:
-        reader = csv.DictReader(fh)
-        # Defensive: normalize fieldnames if a BOM sneaked into the first header
-        if reader.fieldnames:
-            reader.fieldnames = [fn.lstrip('\ufeff').strip() if fn else fn for fn in reader.fieldnames]
-        for r in reader:
-            rr = _normalize_dictreader_row(r)
-            # Accept common header variants to be tolerant of various CSV sources
-            code = rr.get('code') or rr.get('Code') or rr.get('kanton') or rr.get('Kanton')
-            name = rr.get('name') or rr.get('Name')
-            population = rr.get('population') or rr.get('Population') or rr.get('pop') or '0'
-            workforce = rr.get('workforce') or rr.get('Workforce') or rr.get('work') or None
-            primary_language = rr.get('primary_language') or rr.get('Primary_language') or rr.get('language') or rr.get('Language') or 'de'
-            cants.append(CantonInfo(
-                code=code,
-                name=name,
-                population=_safe_int(population, 0) or 0,
-                workforce=_safe_int(workforce, None),
-                primary_language=primary_language or 'de'
-            ))
-    return cants
 
-def load_companies_csv(path: str) -> List[CompanyInfo]:
-    comps: List[CompanyInfo] = []
-    with open(path, newline='', encoding='utf-8') as fh:
-        reader = csv.DictReader(fh)
-        if reader.fieldnames:
-            reader.fieldnames = [fn.lstrip('\ufeff').strip() if fn else fn for fn in reader.fieldnames]
-        for r in reader:
-            rr = _normalize_dictreader_row(r)
-            comps.append(CompanyInfo(
-                name=rr.get('name') or rr.get('Name') or '',
-                canton=rr.get('canton') or rr.get('Kanton') or rr.get('Canton') or '',
-                industry=rr.get('industry') or rr.get('Industry') or '',
-                size_band=rr.get('size_band') or rr.get('size') or rr.get('sizeBand') or ''
-            ))
-    return comps
+def load_companies_json(path: str = 'data/companies.json') -> List[Dict]:
+    """Load companies from JSON file"""
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Companies data not found at {path}")
+    
+    with open(path, 'r', encoding='utf-8-sig') as f:
+        data = json.load(f)
+    
+    # Handle both list and dict formats
+    if isinstance(data, dict):
+        return list(data.values())
+    return data if isinstance(data, list) else []
 
-def load_occupations_json(path: str) -> List[OccupationCategory]:
-    with open(path, 'r', encoding='utf-8') as fh:
-        data = json.load(fh)
-    occs = [OccupationCategory(**o) for o in data.get('occupations', [])]
-    return occs
 
-# NOTE: For production, replace any sample files in data/ with official SFSO exports.
+def load_occupations_json(path: str = 'data/occupations.json') -> List[Dict]:
+    """Load occupations from JSON file"""
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Occupations data not found at {path}")
+    
+    with open(path, 'r', encoding='utf-8-sig') as f:
+        data = json.load(f)
+    
+    # Handle both list and dict formats
+    if isinstance(data, dict):
+        return list(data.values())
+    return data if isinstance(data, list) else []
+
+
+def load_names_csv(path: str) -> List[str]:
+    """Load names from CSV file"""
+    if not os.path.exists(path):
+        return []
+    
+    names = []
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                # Try multiple column name variations
+                name = (row.get('name') or 
+                       row.get('Name') or 
+                       row.get('vorname') or 
+                       row.get('Vorname') or 
+                       row.get('first_name') or
+                       next(iter(row.values())))
+                if name:
+                    names.append(name.strip())
+    except Exception as e:
+        print(f"Warning: Error loading names from {path}: {e}")
+    
+    return names
+
+
+def load_surnames_csv(path: str = 'data/surnames.csv') -> List[str]:
+    """Load surnames from CSV file"""
+    if not os.path.exists(path):
+        return []
+    
+    surnames = []
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                # Try multiple column name variations
+                surname = (row.get('surname') or 
+                          row.get('Surname') or 
+                          row.get('last_name') or 
+                          row.get('nachname') or 
+                          row.get('Nachname') or
+                          next(iter(row.values())))
+                if surname:
+                    surnames.append(surname.strip())
+    except Exception as e:
+        print(f"Warning: Error loading surnames from {path}: {e}")
+    
+    return surnames
+
+
+# Legacy function names for backwards compatibility
+def load_cantons_csv(*args, **kwargs):
+    """Deprecated: Use load_cantons_json instead"""
+    return load_cantons_json(*args, **kwargs)
+
+
+def load_companies_csv(*args, **kwargs):
+    """Deprecated: Use load_companies_json instead"""
+    return load_companies_json(*args, **kwargs)

@@ -1,0 +1,40 @@
+{
+  "first_name": "Marco",
+  "last_name": "Bianchi",
+  "full_name": "Marco Bianchi",
+  "canton": "ZH",
+  "language": "fr",
+  "age": 62,
+  "birth_year": 1963,
+  "gender": "other",
+  "experience_years": 43.0,
+  "industry": "technology",
+  "current_title": "Senior Technology",
+  "career_history": [
+    {
+      "title": "Senior technology",
+      "company": "SwissTech AG",
+      "start_date": "2018-01",
+      "end_date": "2022-12",
+      "desc": "Worked on projects."
+    }
+  ],
+  "email": "marco.bianchi@example.ch",
+  "phone": "0761628626",
+  "skills": [
+    "Hier sind 6–8 zentrale Fähigkeiten, die für einen Senior Technology Specialist mit 43 Jahren Erfahrung in der Technologiebranche relevant sein könnten:",
+    "### Technische Fähigkeiten:",
+    "1. **Architektur und Design von IT-Systemen**: Fähigkeit, komplexe Systemarchitekturen zu entwerfen und zu implementieren.",
+    "2. **Cloud-Technologien**: Erfahrung mit Cloud-Plattformen wie AWS, Azure oder Google Cloud und deren Integration in bestehende Systeme.",
+    "3. **Cybersecurity**: Kenntnisse in Sicherheitsprotokollen, Risikomanagement und der Implementierung von Sicherheitslösungen.",
+    "4. **Datenanalyse und Business Intelligence**: Fähigkeit, große Datenmengen zu analysieren und wertvolle Erkenntnisse für strategische Entscheidungen zu gewinnen.",
+    "5. **Software-Entwicklung**: Fundierte Kenntnisse in Programmiersprachen (z.B. Java, Python, C#) und Entwicklungsmethoden wie Agile und DevOps.",
+    "### Soft Skills:",
+    "6. **Führungskompetenz**: Fähigkeit, Teams zu leiten, zu motivieren und zu entwickeln, sowie Erfahrung in der Zusammenarbeit mit interdisziplinären Gruppen.",
+    "7. **Kommunikationsfähigkeit**: Starke mündliche und schriftliche Kommunikationsfähigkeiten, um komplexe technische Konzepte verständlich zu vermitteln.",
+    "8. **Problemlösungsfähigkeiten**: Kreativität und analytisches Denken zur Identifizierung und Lösung von technischen Herausforderungen.",
+    "Diese Fähigkeiten bieten eine solide Grundlage für eine erfolgreiche Karriere in der Technologiebranche auf Senior-Level."
+  ],
+  "summary": "Erfahrener Senior Technology Professional mit über 43 Jahren umfassender Expertise in der Entwicklung und Implementierung innovativer technischer Lösungen. Nachgewiesene Erfolge in der Führung von Projektteams zur Optimierung von Geschäftsprozessen und zur Steigerung der Effizienz. Fundierte Kenntnisse in modernen Technologien, Softwareentwicklung und Systemintegration, ergänzt durch eine ausgeprägte Fähigkeit zur strategischen Planung und Problemlösung. Engagiert, komplexe technische Herausforderungen zu meistern und nachhaltige Ergebnisse zu erzielen.",
+  "photo_path": null
+}

@@ -1,0 +1,40 @@
+{
+  "first_name": "Marco",
+  "last_name": "Müller",
+  "full_name": "Marco Müller",
+  "canton": "ZH",
+  "language": "de",
+  "age": 55,
+  "birth_year": 1970,
+  "gender": "female",
+  "experience_years": 32.0,
+  "industry": "technology",
+  "current_title": "Senior Technology",
+  "career_history": [
+    {
+      "title": "Senior technology",
+      "company": "SwissTech AG",
+      "start_date": "2018-01",
+      "end_date": "2022-12",
+      "desc": "Worked on projects."
+    }
+  ],
+  "email": "marco.müller@example.ch",
+  "phone": "0765507738",
+  "skills": [
+    "Hier sind 6–8 zentrale Fähigkeiten, die für einen Senior Technology Specialist mit 32 Jahren Erfahrung relevant sein könnten:",
+    "### Technische Fähigkeiten:",
+    "1. **Cloud-Computing**: Umfangreiche Kenntnisse in Cloud-Plattformen wie AWS, Azure oder Google Cloud.",
+    "2. **Software-Entwicklung**: Erfahrung in verschiedenen Programmiersprachen (z.B. Java, Python, C#) und Software-Entwicklungsmethoden (z.B. Agile, DevOps).",
+    "3. **Datenanalyse und -management**: Fähigkeiten in der Datenanalyse, Datenbankmanagement (z.B. SQL, NoSQL) und Big Data Technologien.",
+    "4. **IT-Sicherheitsmanagement**: Fundiertes Wissen über Cyber-Sicherheit, Datenschutzbestimmungen und Risikomanagement-Praktiken.",
+    "### Soft Skills:",
+    "5. **Führungskompetenz**: Erfahrung in der Leitung von Teams und Projekten sowie der Mentoring von Junior-Mitarbeitern.",
+    "6. **Kommunikationsfähigkeit**: Fähigkeit, komplexe technische Konzepte klar und verständlich an nicht-technische Stakeholder zu vermitteln.",
+    "7. **Problemlösungsfähigkeiten**: Stark ausgeprägte analytische Fähigkeiten zur Identifizierung und Lösung technischer Herausforderungen.",
+    "8. **Anpassungsfähigkeit**: Flexibilität und Bereitschaft, sich schnell an neue Technologien und Marktbedingungen anzupassen.",
+    "Diese Fähigkeiten spiegeln sowohl die technischen Kompetenzen als auch die zwischenmenschlichen Fähigkeiten wider, die für eine Senior-Position in der Technologiebranche wichtig sind."
+  ],
+  "summary": "Erfahrener Senior Technology Specialist mit über 32 Jahren Berufserfahrung in der IT-Branche, spezialisiert auf Systemarchitektur und Softwareentwicklung. Nachweisliche Erfolge in der Implementierung innovativer Technologielösungen, die die Effizienz und Leistung von Unternehmen signifikant steigern. Ausgezeichnete Kenntnisse in modernen Programmiersprachen, Cloud-Technologien und Projektmanagement-Methoden. Engagiert, komplexe technische Herausforderungen zu meistern und Teams zur Erreichung gemeinsamer Ziele zu führen.",
+  "photo_path": null
+}
