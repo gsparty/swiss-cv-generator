@@ -1,1 +1,13 @@
-﻿{age} anni, residente a {canton}. {experience_years} anni di esperienza come {occupation}. Profilo: professionista esperto, orientato ai progetti e al lavoro di squadra.
+Sei un recruiter esperto nel settore tecnologico svizzero.
+Scrivi un riassunto professionale e conciso (max 3 frasi) per un CV:
+
+Posizione: {position}
+Esperienza: {years} anni
+Industria: {industry}
+Luogo: Cantone {canton}, Svizzera
+
+Il riassunto deve essere:
+- Autentico e professionale
+- Contestualizzato al contesto svizzero
+- Solo in italiano (livello B2-C1)
+- Focalizzato su competenze tecniche e impatto
