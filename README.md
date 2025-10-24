@@ -295,9 +295,54 @@ python -m src.cli.main validate
 pip install weasyprint
 ```
 
-## 📝 License
+## Explaining the files:
 
-MIT License - See LICENSE file
+cli/main.py: Powers the command line interface. Parses commands and options, and triggers persona generation and export.
+
+data/models.py: Defines the SwissPersona data model (using Pydantic).
+
+data/loader.py: Functions to load Swiss name, canton, company, and occupation data from CSV/JSON files in /data.
+
+generation/sampling.py: Produces realistic persona: samples canton (population-weighted), age, experience, company, etc.
+
+generation/openai_client.py: Calls OpenAI to generate summaries and skills if API/key is available. Handles errors gracefully.
+
+generation/prompts.py: OpenAI prompt templates (DE/FR/IT), customizable for summaries and skills.
+
+personas/persona_builder.py: Orchestrates persona building, summary, skill, and career generation.
+
+export/to_json.py: Serializes persona to JSON.
+
+export/to_pdf.py: Generates professional Swiss CV PDFs. (This is where structure/layout bugs have appeared and are being fixed as we speak - see below!)
+
+data/: Contains data used for sampling.
+
+cantons.json: Swiss Federal Statistical Office canton population & language data.
+
+companies.json: Realistic Swiss companies by canton/industry.
+
+occupations.json: CH-ISCO-19 titles from SBFI/berufsberatung.
+
+names_de.csv, names_fr.csv, names_it.csv, surnames.csv: Name frequency lists from census/SFSO/berufsberatung.
+
+output/: Where generated CVs (pdf/json) are saved.
+
+templates/: Prompt templates for OpenAI (DE/FR/IT, planned).
+
+tests/: For unit/integration testing.
+
+README.md: Full usage, config, and contribution guide.
+
+main.py: Optional, often just entrypoint for CLI script.
+
+🔗 Data Sources
+BFS (Federal Statistical Office): Canton populations/languages (cantons.json)
+
+SBFI/Berufsberatung: job/occupation taxonomy (occupations.json), common occupational pathways.
+
+Swiss Name Statistics: names_*.csv, surnames.csv
+
+Custom/LinkedIn/Google: companies.json (50+ Swiss companies by industry/canton).
 
 ## 🤝 Contributing
 

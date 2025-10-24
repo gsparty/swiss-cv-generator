@@ -1,220 +1,129 @@
-from reportlab.lib.pagesizes import A4
+﻿from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import mm
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib import colors
-from typing import List
+from reportlab.lib.enums import TA_LEFT
 from src.data.models import SwissPersona
+import re
 
-# Swiss professional colors
 COLORS = {
     'primary': colors.HexColor('#2C3E50'),
     'accent': colors.HexColor('#3498DB'),
-    'light_gray': colors.HexColor('#ECF0F1'),
-    'text': colors.HexColor('#34495E'),
-    'light_text': colors.HexColor('#7F8C8D'),
+    'sidebar': colors.HexColor('#ECF0F1'),
+    'text': colors.HexColor('#2C3E50'),
+    'light': colors.HexColor('#7F8C8D'),
 }
 
-def render_cv_pdf(persona: SwissPersona, path: str):
-    """Render professional 2-column Swiss CV layout"""
-    
-    doc = SimpleDocTemplate(
-        path,
-        pagesize=A4,
-        rightMargin=15*mm,
-        leftMargin=15*mm,
-        topMargin=15*mm,
-        bottomMargin=15*mm
-    )
-    
+def clean_markdown(text):
+    if not text:
+        return text
+    text = re.sub(r'#{1,6}\s*', '', text)
+    text = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
+    text = re.sub(r'\*(.+?)\*', r'\1', text)
+    text = re.sub(r'^\d+\.\s*', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^-\s*', '', text, flags=re.MULTILINE)
+    return text.strip()
+
+def render_cv_pdf(persona, path):
+    doc = SimpleDocTemplate(path, pagesize=A4, rightMargin=10*mm, leftMargin=10*mm, topMargin=10*mm, bottomMargin=10*mm)
     styles = getSampleStyleSheet()
     
-    title_style = ParagraphStyle(
-        'CustomTitle',
-        parent=styles['Heading1'],
-        fontSize=24,
-        textColor=COLORS['primary'],
-        spaceAfter=2,
-        fontName='Helvetica-Bold'
-    )
+    name_style = ParagraphStyle('Name', parent=styles['Normal'], fontSize=26, textColor=COLORS['primary'], fontName='Helvetica-Bold', spaceAfter=20, alignment=TA_LEFT)
+    section_style = ParagraphStyle('Section', parent=styles['Normal'], fontSize=9, textColor=colors.white, fontName='Helvetica-Bold', backColor=COLORS['primary'], leftIndent=0, rightIndent=0, spaceAfter=5, spaceBefore=3, leading=12)
+    normal_style = ParagraphStyle('Normal', parent=styles['Normal'], fontSize=8.5, textColor=COLORS['text'], spaceAfter=3, leading=11, leftIndent=0)
+    bullet_style = ParagraphStyle('Bullet', parent=styles['Normal'], fontSize=8, textColor=COLORS['text'], spaceAfter=3, leading=11, leftIndent=8)
+    exp_title_style = ParagraphStyle('ExpTitle', parent=styles['Normal'], fontSize=9.5, textColor=COLORS['accent'], fontName='Helvetica-Bold', spaceAfter=1)
+    company_style = ParagraphStyle('Company', parent=styles['Normal'], fontSize=8.5, textColor=COLORS['text'], spaceAfter=0.5)
+    date_style = ParagraphStyle('Date', parent=styles['Normal'], fontSize=7.5, textColor=COLORS['light'], fontName='Helvetica-Oblique', spaceAfter=2)
+    desc_style = ParagraphStyle('Desc', parent=styles['Normal'], fontSize=8.5, textColor=COLORS['text'], spaceAfter=4, leading=11, leftIndent=8)
     
-    section_header_style = ParagraphStyle(
-        'SectionHeader',
-        parent=styles['Heading2'],
-        fontSize=11,
-        textColor=COLORS['primary'],
-        spaceAfter=8,
-        spaceBefore=8,
-        fontName='Helvetica-Bold',
-        borderPadding=5,
-        backColor=COLORS['light_gray']
-    )
-    
-    job_title_style = ParagraphStyle(
-        'JobTitle',
-        parent=styles['Normal'],
-        fontSize=10,
-        textColor=COLORS['accent'],
-        fontName='Helvetica-Bold',
-        spaceAfter=2
-    )
-    
-    company_style = ParagraphStyle(
-        'Company',
-        parent=styles['Normal'],
-        fontSize=9,
-        textColor=COLORS['text'],
-        fontName='Helvetica',
-        spaceAfter=1
-    )
-    
-    date_style = ParagraphStyle(
-        'Date',
-        parent=styles['Normal'],
-        fontSize=8,
-        textColor=COLORS['light_text'],
-        fontName='Helvetica-Oblique',
-        spaceAfter=3
-    )
-    
-    normal_style = ParagraphStyle(
-        'Normal',
-        parent=styles['Normal'],
-        fontSize=9,
-        textColor=COLORS['text'],
-        spaceAfter=6,
-        leading=12
-    )
-    
-    skill_style = ParagraphStyle(
-        'Skill',
-        parent=styles['Normal'],
-        fontSize=8,
-        textColor=COLORS['text'],
-        spaceAfter=4,
-        leading=10
-    )
-    
-    contact_style = ParagraphStyle(
-        'Contact',
-        parent=styles['Normal'],
-        fontSize=8,
-        textColor=COLORS['text'],
-        spaceAfter=4,
-        leading=11
-    )
-    
-    language_style = ParagraphStyle(
-        'Language',
-        parent=styles['Normal'],
-        fontSize=8,
-        textColor=COLORS['text'],
-        spaceAfter=2,
-        leading=10
-    )
-    
-    # LEFT COLUMN
-    left_content = []
-    
-    left_content.append(Paragraph('<b>KONTAKT</b>', section_header_style))
+    left = []
+    left.append(Paragraph('KONTAKT', section_style))
     full_name = getattr(persona, 'full_name', 'Name')
-    left_content.append(Paragraph(f"<b>{full_name}</b>", contact_style))
-    
+    left.append(Paragraph(full_name, normal_style))
     age = getattr(persona, 'age', 'N/A')
-    left_content.append(Paragraph(f"{age} Jahre", contact_style))
-    left_content.append(Spacer(1, 3))
-    
+    left.append(Paragraph(f'{age} Jahre', normal_style))
+    left.append(Spacer(1, 2))
     phone = getattr(persona, 'phone', 'N/A')
-    left_content.append(Paragraph(f"<b>Telefon:</b> {phone}", contact_style))
-    
+    left.append(Paragraph(phone, normal_style))
     email = getattr(persona, 'email', 'N/A')
-    left_content.append(Paragraph(f"<b>E-Mail:</b> {email}", contact_style))
-    
+    left.append(Paragraph(email, normal_style))
     canton = getattr(persona, 'canton', 'ZH')
-    left_content.append(Paragraph(f"<b>Kanton:</b> {canton}", contact_style))
-    left_content.append(Spacer(1, 8))
+    left.append(Paragraph(f'Kanton {canton}', normal_style))
+    left.append(Spacer(1, 5))
     
-    left_content.append(Paragraph('<b>SPRACHEN</b>', section_header_style))
-    language = getattr(persona, 'language', 'DE')
-    left_content.append(Paragraph(f"{language.upper()} - Muttersprache", language_style))
-    left_content.append(Paragraph("Englisch - Flussig", language_style))
-    left_content.append(Spacer(1, 8))
+    left.append(Paragraph('SPRACHEN', section_style))
+    language = getattr(persona, 'language', 'de')
+    lang_names = {'de': 'Deutsch', 'fr': 'Franzoesisch', 'it': 'Italienisch', 'en': 'Englisch'}
+    main_lang = lang_names.get(language.lower(), 'Deutsch')
+    left.append(Paragraph(f'{main_lang} - Muttersprache', normal_style))
+    left.append(Paragraph('Englisch - Flüssig', normal_style))
+    left.append(Spacer(1, 5))
     
-    left_content.append(Paragraph('<b>FAEHIGKEITEN</b>', section_header_style))
+    left.append(Paragraph('KOMPETENZEN', section_style))
     skills = getattr(persona, 'skills', [])
-    for skill in skills[:8]:
-        left_content.append(Paragraph(f"• {skill}", skill_style))
-    left_content.append(Spacer(1, 6))
+    for skill in skills[:10]:
+        clean_skill = clean_markdown(str(skill))
+        if not clean_skill or len(clean_skill) < 3:
+            continue
+        if any(x in clean_skill.lower() for x in ['technische', 'soft skills', 'fähigkeiten', 'für einen']):
+            continue
+        left.append(Paragraph(f'• {clean_skill}', bullet_style))
     
-    # RIGHT COLUMN
-    right_content = []
-    
-    right_content.append(Paragraph(full_name, title_style))
-    current_title = getattr(persona, 'current_title', 'Position')
-    right_content.append(Paragraph(current_title, job_title_style))
-    right_content.append(Spacer(1, 6))
+    right = []
+    right.append(Paragraph(full_name, name_style))
+    right.append(Spacer(1, 8))
     
     summary = getattr(persona, 'summary', '')
     if summary:
-        right_content.append(Paragraph('<b>PROFIL</b>', section_header_style))
-        right_content.append(Paragraph(summary, normal_style))
-        right_content.append(Spacer(1, 6))
+        right.append(Paragraph('PROFESSIONELLES PROFIL', section_style))
+        clean_summary = clean_markdown(summary)
+        right.append(Paragraph(clean_summary, desc_style))
+        right.append(Spacer(1, 3))
     
-    right_content.append(Paragraph('<b>BERUFSERFAHRUNG</b>', section_header_style))
+    right.append(Paragraph('BERUFSERFAHRUNG', section_style))
+    career = getattr(persona, 'career_history', [])
+    for i, exp in enumerate(career[:5]):
+        if not isinstance(exp, dict):
+            continue
+        title = exp.get('title', 'Position')
+        company = exp.get('company', 'Unternehmen')
+        start = exp.get('start_date', '')
+        end = exp.get('end_date', 'heute')
+        desc = exp.get('desc', '')
+        clean_desc = clean_markdown(desc)
+        right.append(Paragraph(title, exp_title_style))
+        right.append(Paragraph(company, company_style))
+        right.append(Paragraph(f'{start} - {end}', date_style))
+        right.append(Paragraph(clean_desc, desc_style))
+        if i < len(career) - 1:
+            right.append(Spacer(1, 2))
     
-    career_history = getattr(persona, 'career_history', [])
-    for i, exp in enumerate(career_history[:5]):
-        title = exp.get('title', 'Position') if isinstance(exp, dict) else 'Position'
-        company = exp.get('company', 'Unternehmen') if isinstance(exp, dict) else 'Unternehmen'
-        start_date = exp.get('start_date', '') if isinstance(exp, dict) else ''
-        end_date = exp.get('end_date', 'aktuell') if isinstance(exp, dict) else 'aktuell'
-        desc = exp.get('desc', '') if isinstance(exp, dict) else ''
-        
-        right_content.append(Paragraph(title, job_title_style))
-        right_content.append(Paragraph(company, company_style))
-        right_content.append(Paragraph(f"{start_date} – {end_date}", date_style))
-        right_content.append(Paragraph(desc, normal_style))
-        
-        if i < len(career_history) - 1:
-            right_content.append(Spacer(1, 4))
-    
-    right_content.append(Spacer(1, 6))
-    
+    right.append(Spacer(1, 3))
     education = getattr(persona, 'education', [])
     if education:
-        right_content.append(Paragraph('<b>AUSBILDUNG</b>', section_header_style))
-        for edu in education[:3]:
-            degree = edu.get('degree', 'Abschluss') if isinstance(edu, dict) else 'Abschluss'
-            field = edu.get('field_of_study', 'Fachbereich') if isinstance(edu, dict) else 'Fachbereich'
-            institution = edu.get('institution', 'Institution') if isinstance(edu, dict) else 'Institution'
-            end_year = edu.get('end_year', '') if isinstance(edu, dict) else ''
-            
-            right_content.append(Paragraph(f"{degree} in {field}", job_title_style))
-            right_content.append(Paragraph(institution, company_style))
-            right_content.append(Paragraph(f"{end_year}", date_style))
-            right_content.append(Spacer(1, 4))
+        right.append(Paragraph('AUSBILDUNG', section_style))
+        for edu in education[:2]:
+            if not isinstance(edu, dict):
+                continue
+            degree = edu.get('degree', 'Abschluss')
+            field = edu.get('field_of_study', 'Fachbereich')
+            institution = edu.get('institution', 'Institution')
+            year = edu.get('end_year', '')
+            right.append(Paragraph(f'{degree} in {field}', exp_title_style))
+            right.append(Paragraph(institution, company_style))
+            right.append(Paragraph(str(year), date_style))
+            right.append(Spacer(1, 2))
     
-    # CREATE 2-COLUMN TABLE
-    left_frame_width = 55*mm
-    right_frame_width = 125*mm
-    
-    table_data = [[left_content, right_content]]
-    
-    main_table = Table(
-        table_data,
-        colWidths=[left_frame_width, right_frame_width],
-        rowHeights=[None]
-    )
-    
-    main_table.setStyle(TableStyle([
+    table = Table([[left, right]], colWidths=[50*mm, 140*mm])
+    table.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
         ('LEFTPADDING', (0, 0), (0, -1), 0),
-        ('RIGHTPADDING', (0, 0), (0, -1), 10),
-        ('LEFTPADDING', (1, 0), (1, -1), 10),
+        ('RIGHTPADDING', (0, 0), (0, -1), 8),
+        ('LEFTPADDING', (1, 0), (1, -1), 8),
         ('RIGHTPADDING', (1, 0), (1, -1), 0),
-        ('BACKGROUND', (0, 0), (0, -1), COLORS['light_gray']),
+        ('BACKGROUND', (0, 0), (0, -1), COLORS['sidebar']),
         ('BORDER', (0, 0), (-1, -1), 0, colors.white),
     ]))
-    
-    elements = [main_table]
-    doc.build(elements)
+    doc.build([table])
