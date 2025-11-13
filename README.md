@@ -272,6 +272,7 @@ MAX_RETRY_ATTEMPTS=3            # Retry attempts
 ```bash
 # Ensure venv is activated
 .\venv\Scripts\Activate.ps1
+
 pip install -r requirements.txt
 ```
 

@@ -1,3 +1,26 @@
 ﻿[build-system]
-requires = ["setuptools>=61.0","wheel"]
+requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "swisscv"
+version = "0.1.0"
+description = "Swiss CV Generator"
+authors = [{ name = "Daniel Brody" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+
+dependencies = [
+    "pydantic[email]",
+    "click",
+    "playwright",
+    "reportlab",
+    "jinja2",
+    "pandas",
+    "numpy"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["swisscv"]
