@@ -1,102 +1,379 @@
-﻿# 🇨🇭 Swiss CV Generator — MVP
+﻿# Swiss CV Generator 🇨🇭
 
-Generate realistic, culturally authentic Swiss CVs directly from the command line.
+Generate realistic, culturally authentic Swiss CVs with authentic Swiss demographic data and OpenAI-powered content generation.
 
-This MVP creates professional-looking PDFs and JSON persona data with **no external dependencies beyond Playwright**.  
-It works out-of-the-box on any machine that can install Python + Playwright.
+## ✨ Features
 
----
+- **Demographic Accuracy**: Population-weighted canton sampling with realistic age-to-experience correlations
+- **Cultural Authenticity**: Language-appropriate names, Swiss contact patterns, industry-specific career progression
+- **Multilingual**: Support for German (DE), French (FR), and Italian (IT)
+- **Professional Output**: JSON and PDF exports with polished Swiss CV layouts
+- **OpenAI Integration**: AI-powered professional summaries with fallback templates
+- **Flexible Filtering**: Generate CVs by canton, industry, language
 
 ## 🚀 Quick Start
 
-git clone https://github.com/gsparty/swiss-cv-generator.git  
+### Prerequisites
+
+- Python 3.9+
+- OpenAI API key (optional - uses fallback if unavailable)
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/gsparty/swiss-cv-generator.git
 cd swiss-cv-generator
 
-create virtual environment and install dependencies  
-python -m venv .venv  
-.\.venv\Scripts\Activate.ps1  
-pip install -e .[dev]
+# Create virtual environment
+python -m venv venv
+.\venv\Scripts\Activate.ps1  # Windows
+# or: source venv/bin/activate  # macOS/Linux
 
-install browser engines for Playwright  
-playwright install chromium
+# Install dependencies
+pip install -r requirements.txt
+```
 
-generate a few Swiss CVs (default canton mix)  
-python -m swisscv.cli.generate --count 3 --outdir demo_out --pdf-engine playwright --pdf-scale 0.92
+### Configuration
 
-**Output:**
+```bash
+# Copy environment template
+copy .env.example .env
 
-demo_out/  
-├─ Anna_Meier_0.pdf  
-├─ Anna_Meier_0.json  
-├─ Lukas_Bianchi_1.pdf  
-└─ Lukas_Bianchi_1.json
+# Add your OpenAI API key (optional)
+notepad .env
+# Set: OPENAI_API_KEY=sk-...
+```
 
-- Each .pdf is a one-page Swiss CV.  
-- Each .json contains the sampled demographic and persona data.
+### Generate Your First CV
+
+```bash
+# Generate 1 German CV
+python -m src.cli.main generate --count 1 --language de
+
+# Check output
+dir sample_outputs/
+```
+
+## 📖 Usage Guide
+
+### Basic Generation
+
+```bash
+# Generate single CV (German)
+python -m src.cli.main generate --count 1 --language de
+
+# Generate 10 CVs (French)
+python -m src.cli.main generate --count 10 --language fr
+
+# Generate 5 CVs (Italian)
+python -m src.cli.main generate --count 5 --language it
+```
+
+### Filter by Canton
+
+```bash
+# Generate 5 Zurich CVs
+python -m src.cli.main generate --count 5 --canton ZH
+
+# Generate 10 Geneva CVs
+python -m src.cli.main generate --count 10 --canton GE
+
+# Geneva cantons: ZH, BE, GE, BS, BL, AG, SO, LU, UR, SZ, OW, NW, GL, AR, AI, SG, TG, TI, VD, VS, NE, JU
+```
+
+### Filter by Industry
+
+```bash
+# Generate tech CVs
+python -m src.cli.main generate --count 10 --industry technology
+
+# Generate finance CVs
+python -m src.cli.main generate --count 5 --industry finance
+
+# Available industries: technology, finance, healthcare, manufacturing, retail, hospitality, education, construction, pharma, insurance, consulting, logistics
+```
+
+### Output Formats
+
+```bash
+# Generate as JSON only
+python -m src.cli.main generate --count 5 --format json
+
+# Generate as PDF only
+python -m src.cli.main generate --count 5 --format pdf
+
+# Generate both JSON and PDF (default)
+python -m src.cli.main generate --count 5 --format both
+```
+
+### Custom Output Directory
+
+```bash
+# Save to custom location
+python -m src.cli.main generate --count 10 --output-dir ./my_cvs
+
+# Output: ./my_cvs/Firstname_Lastname_CA_0.json, etc.
+```
+
+### Verbose Mode
+
+```bash
+# Show detailed generation progress
+python -m src.cli.main generate --count 5 --verbose
+```
+
+### Complete Example
+
+```bash
+# Generate 20 Zurich tech CVs in German, both formats, verbose
+python -m src.cli.main generate \
+  --count 20 \
+  --canton ZH \
+  --industry technology \
+  --language de \
+  --format both \
+  --output-dir ./zurich_tech_cvs \
+  --verbose
+```
+
+## 🔍 Validation
+
+Check that all required data files are present:
+
+```bash
+python -m src.cli.main validate
+```
+
+Output:
+```
+Validating setup...
+  ✓ data/cantons.json
+  ✓ data/companies.json
+  ✓ data/occupations.json
+  ✓ data/names_de.csv
+  ✓ data/names_fr.csv
+  ✓ data/names_it.csv
+  ✓ data/surnames.csv
+
+✓ All data files present!
+```
+
+## 📂 Output Formats
+
+### JSON Output
+
+```json
+{
+  "first_name": "Luca",
+  "last_name": "Meier",
+  "full_name": "Luca Meier",
+  "canton": "ZH",
+  "language": "de",
+  "age": 35,
+  "birth_year": 1990,
+  "gender": "male",
+  "experience_years": 12,
+  "industry": "technology",
+  "current_title": "Senior Technology",
+  "email": "luca.meier@example.ch",
+  "phone": "+41 79 123 45 67",
+  "professional_summary": "Erfahrener Software-Entwickler...",
+  "work_experience": [...],
+  "education": [...],
+  "skills": ["Python", "React", "Database Design"],
+  "languages": {"de": "C2", "en": "B2"}
+}
+```
+
+### PDF Output
+
+Professional Swiss CV layout with:
+- Contact information
+- Professional summary
+- Work experience (reverse chronological)
+- Education
+- Skills and competencies
+- Languages
+- Clean, professional formatting
+
+## 🎨 Supported Languages
+
+- **Deutsch** (German) - `--language de`
+- **Français** (French) - `--language fr`
+- **Italiano** (Italian) - `--language it`
+
+Content is generated in the specified language with authentic Swiss context.
+
+## 🏗️ Architecture
+
+```
+swiss-cv-generator/
+├── src/
+│   └── swiss_cv_generator/
+│       ├── cli/              # Command-line interface
+│       ├── data/             # Data models and loaders
+│       ├── generation/       # OpenAI integration & sampling
+│       ├── personas/         # Persona construction
+│       └── export/           # JSON/PDF export
+├── data/                     # Swiss demographic data
+│   ├── cantons.json         # Canton info & population
+│   ├── companies.json       # Swiss companies
+│   ├── occupations.json     # Job titles
+│   └── names_*.csv          # Names by language
+├── templates/               # CV templates
+├── tests/                   # Test suite
+└── main.py                  # Entry point
+```
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage
+pytest --cov=src --cov-report=html
+
+# Run specific test category
+pytest tests/unit -v
+pytest tests/integration -v
+```
+
+Target: ≥90% code coverage
+
+## 📊 Data Sources
+
+- **BFS** (Federal Statistical Office): Canton demographics and population statistics
+- **SBFI**: Swiss occupation classifications (CH-ISCO-19)
+- **berufsberatung.ch**: Occupation data and career information
+- **Zefix**: Swiss company registry
+
+## ⚙️ Configuration
+
+Edit `.env` to customize:
+
+```bash
+# OpenAI settings
+OPENAI_API_KEY=sk-...          # Your OpenAI API key
+OPENAI_MODEL=gpt-4o-mini       # Model (default)
+OPENAI_MAX_TOKENS=500          # Max tokens
+OPENAI_TEMPERATURE=0.7         # Creativity (0-2)
+
+# Application settings
+DEFAULT_LANGUAGE=de             # Default language
+LOG_LEVEL=INFO                  # Logging level
+MAX_RETRY_ATTEMPTS=3            # Retry attempts
+```
+
+## 🚨 Troubleshooting
+
+### "ModuleNotFoundError"
+```bash
+# Ensure venv is activated
+.\venv\Scripts\Activate.ps1
+
+pip install -r requirements.txt
+```
+
+### "OpenAI API key not found"
+```bash
+# Set environment variable
+$env:OPENAI_API_KEY = "sk-..."
+# Or create .env file (see Configuration)
+```
+
+### "Data files missing"
+```bash
+# Validate setup
+python -m src.cli.main validate
+# Check data/ folder exists and has required JSON/CSV files
+```
+
+### "PDF generation fails"
+```bash
+# Ensure WeasyPrint is installed
+pip install weasyprint
+```
+
+## Explaining the files:
+
+cli/main.py: Powers the command line interface. Parses commands and options, and triggers persona generation and export.
+
+data/models.py: Defines the SwissPersona data model (using Pydantic).
+
+data/loader.py: Functions to load Swiss name, canton, company, and occupation data from CSV/JSON files in /data.
+
+generation/sampling.py: Produces realistic persona: samples canton (population-weighted), age, experience, company, etc.
+
+generation/openai_client.py: Calls OpenAI to generate summaries and skills if API/key is available. Handles errors gracefully.
+
+generation/prompts.py: OpenAI prompt templates (DE/FR/IT), customizable for summaries and skills.
+
+personas/persona_builder.py: Orchestrates persona building, summary, skill, and career generation.
+
+export/to_json.py: Serializes persona to JSON.
+
+export/to_pdf.py: Generates professional Swiss CV PDFs. (This is where structure/layout bugs have appeared and are being fixed as we speak - see below!)
+
+data/: Contains data used for sampling.
+
+cantons.json: Swiss Federal Statistical Office canton population & language data.
+
+companies.json: Realistic Swiss companies by canton/industry.
+
+occupations.json: CH-ISCO-19 titles from SBFI/berufsberatung.
+
+names_de.csv, names_fr.csv, names_it.csv, surnames.csv: Name frequency lists from census/SFSO/berufsberatung.
+
+output/: Where generated CVs (pdf/json) are saved.
+
+templates/: Prompt templates for OpenAI (DE/FR/IT, planned).
+
+tests/: For unit/integration testing.
+
+README.md: Full usage, config, and contribution guide.
+
+main.py: Optional, often just entrypoint for CLI script.
+
+🔗 Data Sources
+BFS (Federal Statistical Office): Canton populations/languages (cantons.json)
+
+SBFI/Berufsberatung: job/occupation taxonomy (occupations.json), common occupational pathways.
+
+Swiss Name Statistics: names_*.csv, surnames.csv
+
+Custom/LinkedIn/Google: companies.json (50+ Swiss companies by industry/canton).
+
+## 🤝 Contributing
+
+Contributions welcome! Please:
+1. Fork the repository
+2. Create feature branch
+3. Add tests for new functionality
+4. Submit pull request
+
+## 📞 Support
+
+- **Issues**: Report bugs on GitHub
+- **Discussions**: Ask questions in Discussions
+- **Documentation**: See docs/ folder
+
+## 🎯 Roadmap
+
+- [ ] Web UI for CV generation
+- [ ] Batch processing API
+- [ ] Custom company database
+- [ ] Advanced filtering options
+- [ ] Salary data integration
+- [ ] LinkedIn profile export
+
+## ⚠️ Disclaimer
+
+This tool generates synthetic CVs for **testing, development, and research purposes only**. Do not use generated CVs for fraudulent purposes or to misrepresent real individuals.
 
 ---
 
-## 🧠 CLI Options
+**Made with ❤️ for the Swiss tech community** 🇨🇭
 
-| Flag | Description |
-|------|-------------|
-| --count | Number of CVs to generate |
-| --outdir | Output directory |
-| --canton | Force canton code (e.g. ZH, VD, TI) |
-| --pdf-engine | Beluto, playwright, or weasyprint |
-| --pdf-scale | Scale factor for rendering (e.g. 0.92 for slightly smaller text) |
-| --one-page | Try to force one-page CVs (truncates long summaries, shrinks scale) |
-| --summary-max-chars | Maximum character length of the profile summary |
-
-**Example (Zurich canton, one-page layout):**  
-python -m swisscv.cli.generate --count 5 --outdir demo_final --canton ZH --one-page --pdf-engine playwright --pdf-scale 0.92
-
----
-
-## 🖋 Fonts
-
-By default, the templates use system fonts (Arial, Segoe UI, sans-serif),  
-so they work everywhere with no setup.
-
-**Optionally**, for consistent embedded typography:
-
-mkdir templates\pdf\fonts  
-Invoke-WebRequest https://github.com/dejavu-fonts/dejavu-fonts/raw/master/ttf/DejaVuSans.ttf -OutFile templates\pdf\fonts\DejaVuSans.ttf
-
-Then update 	emplates/pdf/de.html to reference DejaVuSans.ttf (already supported).
-
----
-
-## 🗜 Optional PDF Compression
-
-The generated PDFs are already small (~80–90 KB).  
-If you'd like to compress them further, install Ghostscript and run:
-
-.\compress-pdfs.ps1 -PdfDir .\demo_final
-
-The script auto-detects Ghostscript if available and creates  
-*_compressed.pdf versions in the same folder.
-
----
-
-## ✅ Development Notes
-
-- Uses **Playwright** for rendering (cross-platform, high-fidelity)  
-- Uses **Jinja2** templates for layout and dynamic data  
-- Generates both .pdf (visual CV) and .json (structured data)  
-- No API keys or external services required for the demo
-
----
-
-## 🧩 Roadmap (Post-MVP)
-
-- Canton-specific datasets (names, cities, industries)  
-- Optional OpenAI integration for summaries  
-- Multilingual templates (fr, it, en)  
-- Enhanced PDF design and branding presets  
-- Deterministic persona sampling with tests + CI
-
----
-
-**Author:** gsparty  
-**License:** MIT
+**Latest version**: 1.0.0 | **Updated**: October 2025

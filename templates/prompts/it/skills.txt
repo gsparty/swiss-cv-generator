@@ -1,0 +1,7 @@
+Scrivi una lista delle competenze e abilità per la seguente posizione:
+
+Posizione: {position}
+Industria: {industry}
+Anni di esperienza: {years}
+
+Usa uno stile svizzero con punti elenco non numerati.

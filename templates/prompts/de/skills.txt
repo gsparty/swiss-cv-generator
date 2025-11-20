@@ -1,0 +1,7 @@
+Schreibe eine Liste von Fähigkeiten und Kompetenzen für folgende Position:
+
+Position: {position}
+Industrie: {industry}
+Erfahrung: {years} Jahre
+
+Nutze eine Schweizer Sprachweise, Stichpunkte ohne Nummerierung.

@@ -1,113 +1,113 @@
-﻿# src/generation/openai_client.py
-"""
-OpenAI wrapper that supports both:
- - modern openai >= 1.0.0 API (from openai import OpenAI; client.chat.create(...))
- - legacy openai 0.28.x API (openai.ChatCompletion.create(...))
+﻿"""OpenAI client for Swiss CV Generator"""
 
-It uses a simple exponential backoff for transient errors and falls back
-to the available API so the codebase can run with either client installed.
-"""
+import os
+import json
+from pathlib import Path
+import hashlib
 
-from typing import Optional
-import time
-import random
-import logging
+try:
+    from openai import OpenAI
+    OPENAI_AVAILABLE = True
+except ImportError:
+    OPENAI_AVAILABLE = False
 
-LOGGER = logging.getLogger(__name__)
+# Cache directory
+CACHE_DIR = Path('src/cache/openai')
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-MAX_RETRIES = 4
-BASE_BACKOFF_SECONDS = 1.0
+def get_cache_key(system_msg, user_msg, model="gpt-4o-mini"):
+    """Generate cache key from messages"""
+    combined = f"{model}:{system_msg}:{user_msg}"
+    return hashlib.sha256(combined.encode()).hexdigest()
 
-def _sleep_with_backoff(attempt: int) -> None:
-    # exponential backoff with jitter
-    backoff = BASE_BACKOFF_SECONDS * (2 ** (attempt - 1))
-    jitter = random.uniform(0, backoff * 0.2)
-    sleep_for = backoff + jitter
-    LOGGER.debug("Backoff: sleeping %.2fs (attempt %d)", sleep_for, attempt)
-    time.sleep(sleep_for)
+def get_cached_response(cache_key):
+    """Get cached OpenAI response"""
+    cache_file = CACHE_DIR / f"{cache_key}.json"
+    if cache_file.exists():
+        try:
+            with open(cache_file, 'r', encoding='utf-8') as f:
+                return json.load(f).get('response')
+        except:
+            return None
+    return None
 
-def _is_transient_error(exc: Exception) -> bool:
-    # Best-effort detection: many OpenAI transient errors mention 'Rate' or 'timeout' or 'temporar'
-    msg = str(exc).lower()
-    return any(k in msg for k in ("rate", "timeout", "temporar", "429", "timed out", "connection"))
-
-def call_openai_chat(system_prompt: str, user_prompt: str, model: str = "gpt-4o-mini", max_tokens: int = 400, temperature: float = 0.7) -> str:
-    """
-    Call the OpenAI chat completion API in a way that supports both
-    the modern and legacy openai Python clients.
-
-    Returns the assistant's content (string) on success, otherwise raises.
-    """
-    messages = [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}]
-
-    # 1) Prefer the modern client if available (openai>=1.0.0)
+def save_cached_response(cache_key, response):
+    """Save OpenAI response to cache"""
+    cache_file = CACHE_DIR / f"{cache_key}.json"
     try:
-        try:
-            from openai import OpenAI  # type: ignore
-            client = OpenAI()
-            LOGGER.debug("Using modern OpenAI client (openai>=1.0)")
-            def _req():
-                resp = client.chat.create(
-                    model=model,
-                    messages=messages,
-                    max_tokens=max_tokens,
-                    temperature=temperature
-                )
-                # modern response: resp.choices[0].message.content
-                # guard for possible differences
-                try:
-                    return resp.choices[0].message.content
-                except Exception:
-                    # some versions return dict-like object
-                    return resp["choices"][0]["message"]["content"]
-        except Exception as exc_modern:
-            # If modern client import or call setup fails, fallback to legacy
-            LOGGER.debug("Modern openai client not available or failed to initialize: %s", exc_modern)
-            raise
+        with open(cache_file, 'w', encoding='utf-8') as f:
+            json.dump({'response': response}, f)
+    except:
+        pass
 
-        # attempt with backoff
-        for attempt in range(1, MAX_RETRIES + 1):
-            try:
-                return _req()
-            except Exception as e:
-                LOGGER.warning("OpenAI modern client call attempt %d failed: %s", attempt, e)
-                if attempt == MAX_RETRIES or not _is_transient_error(e):
-                    raise
-                _sleep_with_backoff(attempt)
+def call_openai_chat(system_message, user_message, model="gpt-4o-mini", temperature=0.7, max_tokens=500):
+    """
+    Call OpenAI Chat API (v1.0+ compatible)
+    
+    Args:
+        system_message: System prompt
+        user_message: User prompt
+        model: Model name (default: gpt-4o-mini)
+        temperature: Temperature (0-2)
+        max_tokens: Max tokens in response
+        
+    Returns:
+        Generated text response
+    """
+    
+    # Check cache first
+    cache_key = get_cache_key(system_message, user_message, model)
+    cached = get_cached_response(cache_key)
+    if cached:
+        print(f"  📦 Using cached response")
+        return cached
+    
+    # If OpenAI not available, use fallback
+    if not OPENAI_AVAILABLE:
+        return get_fallback_response(system_message, user_message)
+    
+    try:
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            print("  ⚠️  No OPENAI_API_KEY set, using fallback")
+            return get_fallback_response(system_message, user_message)
+        
+        # Modern OpenAI v1.0+ API
+        client = OpenAI(api_key=api_key)
+        
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message}
+            ],
+            temperature=temperature,
+            max_tokens=max_tokens,
+            timeout=30
+        )
+        
+        result = response.choices[0].message.content.strip()
+        save_cached_response(cache_key, result)
+        return result
+        
+    except Exception as e:
+        print(f"  ⚠️  OpenAI call failed: {str(e)[:100]}")
+        return get_fallback_response(system_message, user_message)
 
-    except Exception:
-        # 2) Fallback: try legacy openai client typical for 0.28.x
-        try:
-            import openai  # type: ignore
-            LOGGER.debug("Falling back to legacy openai.ChatCompletion (0.28.x compatible)")
-            def _legacy_req():
-                resp = openai.ChatCompletion.create(
-                    model=model,
-                    messages=messages,
-                    max_tokens=max_tokens,
-                    temperature=temperature
-                )
-                # legacy response: resp.choices[0].message.content or resp.choices[0].text
-                c = resp.choices[0]
-                # new-ish older variant:
-                if hasattr(c, "message"):
-                    return c.message["content"] if isinstance(c.message, dict) else c.message.content
-                # very old variant:
-                if hasattr(c, "text"):
-                    return c.text
-                # try dict access:
-                return resp["choices"][0].get("message", {}).get("content") or resp["choices"][0].get("text")
-
-            for attempt in range(1, MAX_RETRIES + 1):
-                try:
-                    return _legacy_req()
-                except Exception as e:
-                    LOGGER.warning("OpenAI legacy client call attempt %d failed: %s", attempt, e)
-                    if attempt == MAX_RETRIES or not _is_transient_error(e):
-                        raise
-                    _sleep_with_backoff(attempt)
-
-        except Exception as final_exc:
-            # Provide a clear error that the caller can display
-            LOGGER.exception("No working OpenAI client available or all attempts failed.")
-            raise RuntimeError("OpenAI call failed (no client available or all retries exhausted) -> " + str(final_exc)) from final_exc
+def get_fallback_response(system_message, user_message):
+    """Fallback response when OpenAI is unavailable"""
+    if "summary" in user_message.lower():
+        return (
+            "Erfahrener Fachmann mit umfangreicher Expertise in Software-Entwicklung, "
+            "Projektmanagement und agilen Methoden. Nachgewiesener Erfolg bei der "
+            "Implementierung innovativer Lösungen und der Leitung hochperformanter Teams."
+        )
+    elif "responsibilities" in user_message.lower() or "aufgaben" in user_message.lower():
+        return (
+            "- Softwareentwicklung und -wartung\n"
+            "- Projektleitung und Koordination\n"
+            "- Teamkollaboration und Mentoring\n"
+            "- Technische Dokumentation"
+        )
+    else:
+        return "Professioneller mit fundierten Kenntnissen und praktischer Erfahrung."

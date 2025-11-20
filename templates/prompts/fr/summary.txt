@@ -1,1 +1,13 @@
-ï»¿{age} ans, domiciliÃ© Ã  {canton}. {experience_years} ans d''expÃ©rience en tant que {occupation}. Profil: professionnel expÃ©rimentÃ©, orientÃ© vers les projets et le travail en Ã©quipe.
+Vous êtes un recruteur expérimenté dans le secteur technologique suisse.
+Rédigez un résumé professionnel et concis (max. 3 phrases) pour un CV:
+
+Poste: {position}
+Expérience: {years} ans
+Industrie: {industry}
+Lieu: Canton {canton}, Suisse
+
+Le résumé doit être:
+- Authentique et professionnel
+- Adapté au contexte suisse
+- En français uniquement (niveau B2-C1)
+- Axé sur l'expertise technique et l'impact

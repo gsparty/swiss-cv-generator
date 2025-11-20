@@ -1,0 +1,40 @@
+{
+  "first_name": "Anna",
+  "last_name": "Schmid",
+  "full_name": "Anna Schmid",
+  "canton": "ZH",
+  "language": "fr",
+  "age": 56,
+  "birth_year": 1969,
+  "gender": "male",
+  "experience_years": 33.0,
+  "industry": "technology",
+  "current_title": "Senior Technology",
+  "career_history": [
+    {
+      "title": "Senior technology",
+      "company": "SwissTech AG",
+      "start_date": "2018-01",
+      "end_date": "2022-12",
+      "desc": "Worked on projects."
+    }
+  ],
+  "email": "anna.schmid@example.ch",
+  "phone": "0776245705",
+  "skills": [
+    "Für eine/n Senior Technology Specialist mit 33 Jahren Erfahrung in der Technologiebranche sind folgende Fähigkeiten entscheidend:",
+    "### Technische Fähigkeiten:",
+    "1. **Architektur und Design von IT-Systemen**: Fähigkeit, komplexe Systeme zu entwerfen und zu implementieren.",
+    "2. **Cloud-Computing und Virtualisierung**: Erfahrung mit Plattformen wie AWS, Azure oder Google Cloud.",
+    "3. **Cybersecurity Expertise**: Kenntnisse in Sicherheitsprotokollen, Risikomanagement und Compliance.",
+    "4. **Datenanalyse und Big Data**: Fähigkeit, große Datenmengen zu analysieren und nutzbare Insights zu generieren.",
+    "### Soft Skills:",
+    "5. **Führungskompetenz**: Erfahrung in der Führung und Entwicklung von Teams sowie in der strategischen Planung.",
+    "6. **Kommunikationsfähigkeit**: Fähigkeit, technische Konzepte klar und verständlich für verschiedene Zielgruppen zu präsentieren.",
+    "7. **Problemlösungsfähigkeiten**: Kreatives und analytisches Denken zur Identifikation und Lösung komplexer technologischer Herausforderungen.",
+    "8. **Anpassungsfähigkeit**: Flexibilität und Lernbereitschaft, um mit sich schnell ändernden Technologien und Märkten Schritt zu halten.",
+    "Diese Fähigkeiten spiegeln sowohl die technische Expertise als auch die erforderlichen zwischenmenschlichen Kompetenzen wider, die für eine Senior-Position in der Technologiebranche wichtig sind."
+  ],
+  "summary": "Erfahrener Senior Technology Specialist mit über 33 Jahren Berufserfahrung in der IT-Branche, spezialisiert auf Systemarchitektur und Softwareentwicklung. Nachgewiesene Erfolge in der Implementierung komplexer Technologielösungen zur Steigerung der Effizienz und Kostensenkung in verschiedenen Unternehmen. Umfangreiche Kenntnisse in modernen Programmiersprachen, Cloud-Technologien und agilen Projektmanagementmethoden. Engagement für kontinuierliche Weiterbildung und Innovation, um den technologischen Fortschritt voranzutreiben.",
+  "photo_path": null
+}

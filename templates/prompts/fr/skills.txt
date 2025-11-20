@@ -1,0 +1,7 @@
+Écrivez une liste des compétences et aptitudes pour le poste suivant:
+
+Poste: {position}
+Industrie: {industry}
+Années d'expérience: {years}
+
+Utilisez un style suisse, sous forme de bullet points non numérotés.

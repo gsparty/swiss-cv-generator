@@ -1,1 +1,13 @@
-ï»¿{age} Jahre alt, wohnhaft in {canton}. {experience_years} Jahre Berufserfahrung als {occupation}. Kurzprofil: Erfahrene:r Fachkraft mit Fokus auf Projektarbeit und Teamarbeit.
+Du bist ein erfahrener Recruiter im Schweizer Tech-Sektor.
+Schreibe eine professionelle, prägnante Zusammenfassung (max. 3 Sätze) für einen CV:
+
+Position: {position}
+Erfahrung: {years} Jahre
+Industrie: {industry}
+Ort: Kanton {canton}, Schweiz
+
+Die Zusammenfassung soll:
+- Authentisch und professionell sein
+- Schweizer Kontext nutzen
+- Nur auf Deutsch (B2-C1 Level)
+- Fokus auf technische Expertise und Impact
